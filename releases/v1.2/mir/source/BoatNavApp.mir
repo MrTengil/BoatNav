@@ -1,0 +1,95 @@
+[ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [WatchUi,3,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 5; @symbol_classdef = [BoatNavApp,5,6,16]; @symbol_extends<0> = [Application,5,25,36]; @symbol_extends<1> = [AppBase,5,37,44]; ]
+class BoatNavApp extends Application.AppBase {
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 6; @position = 16; @symbol_vardef = [_view,6,16,21]; @symbol_type<0> = [BoatNavView,6,25,36]; ]
+    private
+    var _view as BoatNavView or Null = null;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 8; @symbol_functiondef = [initialize,8,13,23]; ]
+    function initialize() as Void {
+_Users_oskar_BoatNav_source_BoatNavApp_mc_8_26_10_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 9 8 ]
+        symbol [ AppBase %tmp.2 9 8 15 ];
+        %tmp.2 = getv ? :AppBase;
+        symbol [ initialize %tmp.3 9 16 26 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_oskar_BoatNav_source_BoatNavApp_mc_8_26_10_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 12; @symbol_functiondef = [onStart,12,13,20]; @symbol_param<0> = [state,12,21,26]; @symbol_param<0>_type<0> = [Dictionary,12,30,40]; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 15; @symbol_functiondef = [onStop,15,13,19]; @symbol_param<0> = [state,15,20,25]; @symbol_param<0>_type<0> = [Dictionary,15,29,39]; ]
+    function onStop(state as Dictionary or Null) as Void {
+_Users_oskar_BoatNav_source_BoatNavApp_mc_15_50_19_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 16 8 ]
+_Users_oskar_BoatNav_source_BoatNavApp_mc_16_8_18_8_if_stmt:
+        symbol [ _view %tmp.2 16 12 17 ];
+        %tmp.2 = getv ? :_view;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_oskar_BoatNav_source_BoatNavApp_mc_16_8_18_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavApp_mc_16_8_18_8_if_true:
+_Users_oskar_BoatNav_source_BoatNavApp_mc_16_27_18_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 17 12 ]
+        symbol [ _view %tmp.6 17 13 18 ];
+        %tmp.6 = getv ? :_view;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        %tmp.8 = as %tmp.7 BoatNavView;
+        symbol [ BoatNavView %tmp.8 17 22 33 ];
+        symbol [ stopGps %tmp.9 17 35 42 ];
+        %tmp.9 = getv function %tmp.8 :stopGps;
+        invoke %tmp.8 %tmp.9();
+_Users_oskar_BoatNav_source_BoatNavApp_mc_16_27_18_8_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavApp_mc_16_8_18_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavApp_mc_16_8_18_8_if_end:
+_Users_oskar_BoatNav_source_BoatNavApp_mc_15_50_19_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 21; @symbol_functiondef = [getInitialView,21,13,27]; @symbol_return<0> = [Views,21,34,39]; @symbol_return<1> = [Views,21,45,50]; @symbol_return<2> = [InputDelegates,21,52,66]; ]
+    function getInitialView() as [Views] or [Views, InputDelegates] {
+_Users_oskar_BoatNav_source_BoatNavApp_mc_21_68_25_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 22 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavApp_mc_21_68_25_4_start" "_Users_oskar_BoatNav_source_BoatNavApp_mc_21_68_25_4_stop" ]
+        %view.1 = local;
+        symbol [ view %view.1 22 12 16 ];
+        symbol [ BoatNavView %tmp.4 22 23 34 ];
+        %tmp.4 = getv ? :BoatNavView;
+        %tmp.1 = newc %tmp.4 ();
+        lputv %view.1 %tmp.1;
+        symbol [ view %view.1 22 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 23 8 ]
+        %tmp.5 = lgetv %view.1;
+        symbol [ view %tmp.5 23 16 20 ];
+        symbol [ _view ? 23 8 13 ];
+        putv self :_view %tmp.5;
+[ "/Users/oskar/BoatNav/source/BoatNavApp.mc" 24 8 ]
+        %tmp.6 = newa 2;
+        %tmp.7 = lgetv %view.1;
+        symbol [ view %tmp.7 24 16 20 ];
+        %tmp.8 = dup %tmp.6;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        symbol [ BoatNavDelegate %tmp.13 24 26 41 ];
+        %tmp.13 = getv ? :BoatNavDelegate;
+        %tmp.14 = lgetv %view.1;
+        symbol [ view %tmp.14 24 42 46 ];
+        %tmp.10 = newc %tmp.13 (%tmp.14);
+        %tmp.15 = dup %tmp.9;
+        %tmp.16 = aputv %tmp.15 1 %tmp.10;
+        ret %tmp.16;
+_Users_oskar_BoatNav_source_BoatNavApp_mc_21_68_25_4_stop:
+    }
+}
+[ @file = "/Users/oskar/BoatNav/source/BoatNavApp.mc"; @line = 1; ]
+<init> {
+}

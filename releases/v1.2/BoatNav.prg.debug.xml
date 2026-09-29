@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/oskar/BoatNav/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="1" lineNum="9" parent="globals/BoatNavView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="2" lineNum="4" parent="globals/BoatNavDelegate" pc="268435479" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/releases/v1.2/gen/006-B3225-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435498" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="4" lineNum="5" parent="globals/BoatNavSummaryView" pc="268435522" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="5" lineNum="5" parent="globals/BoatNavApp" pc="268435541" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="6" lineNum="74" parent="globals/BoatNavSummaryDelegate" pc="268435560" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="203" parent="globals/BoatNavView" pc="268435579" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="204" parent="globals/BoatNavView" pc="268435583" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="205" parent="globals/BoatNavView" pc="268435593" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="206" parent="globals/BoatNavView" pc="268435603" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="207" parent="globals/BoatNavView" pc="268435614" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="208" parent="globals/BoatNavView" pc="268435624" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="209" parent="globals/BoatNavView" pc="268435634" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="210" parent="globals/BoatNavView" pc="268435656" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="212" parent="globals/BoatNavView" pc="268435687" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="213" parent="globals/BoatNavView" pc="268435709" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="215" parent="globals/BoatNavView" pc="268435757" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="216" parent="globals/BoatNavView" pc="268435779" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="218" parent="globals/BoatNavView" pc="268435826" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="221" parent="globals/BoatNavView" pc="268435876" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="7" lineNum="222" parent="globals/BoatNavView" pc="268435898" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="92" parent="globals/BoatNavView" pc="268435939" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="93" parent="globals/BoatNavView" pc="268435943" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="94" parent="globals/BoatNavView" pc="268435959" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="95" parent="globals/BoatNavView" pc="268435972" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="96" parent="globals/BoatNavView" pc="268436003" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="97" parent="globals/BoatNavView" pc="268436034" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="100" parent="globals/BoatNavView" pc="268436056" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="101" parent="globals/BoatNavView" pc="268436069" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="103" parent="globals/BoatNavView" pc="268436097" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="104" parent="globals/BoatNavView" pc="268436110" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="105" parent="globals/BoatNavView" pc="268436129" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="106" parent="globals/BoatNavView" pc="268436148" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="107" parent="globals/BoatNavView" pc="268436167" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="108" parent="globals/BoatNavView" pc="268436189" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="110" parent="globals/BoatNavView" pc="268436237" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="111" parent="globals/BoatNavView" pc="268436247" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="112" parent="globals/BoatNavView" pc="268436257" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="113" parent="globals/BoatNavView" pc="268436267" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="114" parent="globals/BoatNavView" pc="268436277" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="114" parent="globals/BoatNavView" pc="268436288" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="8" lineNum="116" parent="globals/BoatNavView" pc="268436304" symbol="onPosition"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="227" parent="globals/BoatNavView" pc="268436321" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="228" parent="globals/BoatNavView" pc="268436325" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="229" parent="globals/BoatNavView" pc="268436335" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="231" parent="globals/BoatNavView" pc="268436345" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="232" parent="globals/BoatNavView" pc="268436379" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="233" parent="globals/BoatNavView" pc="268436389" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="234" parent="globals/BoatNavView" pc="268436423" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="236" parent="globals/BoatNavView" pc="268436433" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="238" parent="globals/BoatNavView" pc="268436440" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="239" parent="globals/BoatNavView" pc="268436459" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="240" parent="globals/BoatNavView" pc="268436476" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="241" parent="globals/BoatNavView" pc="268436514" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="242" parent="globals/BoatNavView" pc="268436546" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="243" parent="globals/BoatNavView" pc="268436578" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="9" lineNum="244" parent="globals/BoatNavView" pc="268436622" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="10" lineNum="247" parent="globals/BoatNavView" pc="268436656" symbol="&lt;globals/BoatNavView/&lt;&gt;headingToCardinal&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="10" lineNum="248" parent="globals/BoatNavView" pc="268436660" symbol="&lt;globals/BoatNavView/&lt;&gt;headingToCardinal&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="10" lineNum="250" parent="globals/BoatNavView" pc="268436876" symbol="&lt;globals/BoatNavView/&lt;&gt;headingToCardinal&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="11" lineNum="35" parent="globals/BoatNavView" pc="268436909" symbol="onHide"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="11" lineNum="36" parent="globals/BoatNavView" pc="268436911" symbol="onHide"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="11" lineNum="37" parent="globals/BoatNavView" pc="268436923" symbol="onHide"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="253" parent="globals/BoatNavView" pc="268436964" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="254" parent="globals/BoatNavView" pc="268436968" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="255" parent="globals/BoatNavView" pc="268437026" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="256" parent="globals/BoatNavView" pc="268437052" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="257" parent="globals/BoatNavView" pc="268437065" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="12" lineNum="258" parent="globals/BoatNavView" pc="268437096" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="13" lineNum="31" parent="globals/BoatNavView" pc="268437167" symbol="onShow"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="13" lineNum="32" parent="globals/BoatNavView" pc="268437169" symbol="onShow"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="14" lineNum="28" parent="globals/BoatNavView" pc="268437207" symbol="onLayout"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="15" lineNum="41" parent="globals/BoatNavView" pc="268437210" symbol="stopGps"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="15" lineNum="42" parent="globals/BoatNavView" pc="268437212" symbol="stopGps"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="15" lineNum="43" parent="globals/BoatNavView" pc="268437249" symbol="stopGps"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="15" lineNum="44" parent="globals/BoatNavView" pc="268437262" symbol="stopGps"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="15" lineNum="45" parent="globals/BoatNavView" pc="268437280" symbol="stopGps"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="261" parent="globals/BoatNavView" pc="268437293" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="262" parent="globals/BoatNavView" pc="268437297" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="263" parent="globals/BoatNavView" pc="268437304" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="264" parent="globals/BoatNavView" pc="268437323" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="265" parent="globals/BoatNavView" pc="268437342" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="268" parent="globals/BoatNavView" pc="268437499" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="268" parent="globals/BoatNavView" pc="268437510" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="16" lineNum="269" parent="globals/BoatNavView" pc="268437520" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="17" lineNum="49" parent="globals/BoatNavView" pc="268437585" symbol="isTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="17" lineNum="50" parent="globals/BoatNavView" pc="268437587" symbol="isTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="181" parent="globals/BoatNavView" pc="268437596" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="182" parent="globals/BoatNavView" pc="268437600" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="183" parent="globals/BoatNavView" pc="268437622" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="183" parent="globals/BoatNavView" pc="268437633" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="184" parent="globals/BoatNavView" pc="268437646" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="185" parent="globals/BoatNavView" pc="268437668" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="187" parent="globals/BoatNavView" pc="268437705" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="18" lineNum="188" parent="globals/BoatNavView" pc="268437727" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="53" parent="globals/BoatNavView" pc="268437840" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="54" parent="globals/BoatNavView" pc="268437844" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="55" parent="globals/BoatNavView" pc="268437856" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="56" parent="globals/BoatNavView" pc="268437866" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="57" parent="globals/BoatNavView" pc="268437879" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="58" parent="globals/BoatNavView" pc="268437892" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="59" parent="globals/BoatNavView" pc="268437902" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="60" parent="globals/BoatNavView" pc="268437925" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="61" parent="globals/BoatNavView" pc="268437953" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="62" parent="globals/BoatNavView" pc="268437988" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="64" parent="globals/BoatNavView" pc="268438001" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="65" parent="globals/BoatNavView" pc="268438011" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="66" parent="globals/BoatNavView" pc="268438024" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="67" parent="globals/BoatNavView" pc="268438042" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="69" parent="globals/BoatNavView" pc="268438054" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="70" parent="globals/BoatNavView" pc="268438061" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="71" parent="globals/BoatNavView" pc="268438074" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="73" parent="globals/BoatNavView" pc="268438120" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="74" parent="globals/BoatNavView" pc="268438127" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="75" parent="globals/BoatNavView" pc="268438138" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="77" parent="globals/BoatNavView" pc="268438169" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="83" parent="globals/BoatNavView" pc="268438229" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="19" lineNum="85" parent="globals/BoatNavView" pc="268438296" symbol="toggleTracking"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="193" parent="globals/BoatNavView" pc="268438313" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="194" parent="globals/BoatNavView" pc="268438317" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="195" parent="globals/BoatNavView" pc="268438360" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="196" parent="globals/BoatNavView" pc="268438401" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="198" parent="globals/BoatNavView" pc="268438429" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="20" lineNum="199" parent="globals/BoatNavView" pc="268438451" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="21" lineNum="24" parent="globals/BoatNavView" pc="268438489" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="21" lineNum="25" parent="globals/BoatNavView" pc="268438491" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="164" parent="globals/BoatNavView" pc="268438510" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="165" parent="globals/BoatNavView" pc="268438514" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="166" parent="globals/BoatNavView" pc="268438524" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="167" parent="globals/BoatNavView" pc="268438543" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="168" parent="globals/BoatNavView" pc="268438562" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="169" parent="globals/BoatNavView" pc="268438596" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="170" parent="globals/BoatNavView" pc="268438630" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="171" parent="globals/BoatNavView" pc="268438664" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="172" parent="globals/BoatNavView" pc="268438698" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="173" parent="globals/BoatNavView" pc="268438705" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="174" parent="globals/BoatNavView" pc="268438739" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="175" parent="globals/BoatNavView" pc="268438773" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="176" parent="globals/BoatNavView" pc="268438807" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="177" parent="globals/BoatNavView" pc="268438841" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="22" lineNum="178" parent="globals/BoatNavView" pc="268438863" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="119" parent="globals/BoatNavView" pc="268438984" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="120" parent="globals/BoatNavView" pc="268438988" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="121" parent="globals/BoatNavView" pc="268439007" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="122" parent="globals/BoatNavView" pc="268439026" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="124" parent="globals/BoatNavView" pc="268439036" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="125" parent="globals/BoatNavView" pc="268439058" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="127" parent="globals/BoatNavView" pc="268439070" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="128" parent="globals/BoatNavView" pc="268439090" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="129" parent="globals/BoatNavView" pc="268439110" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="130" parent="globals/BoatNavView" pc="268439128" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="131" parent="globals/BoatNavView" pc="268439146" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="23" lineNum="132" parent="globals/BoatNavView" pc="268439164" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="24" lineNum="88" parent="globals/BoatNavView" pc="268439183" symbol="onTimer"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="24" lineNum="89" parent="globals/BoatNavView" pc="268439185" symbol="onTimer"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="135" parent="globals/BoatNavView" pc="268439202" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="136" parent="globals/BoatNavView" pc="268439206" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="137" parent="globals/BoatNavView" pc="268439224" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="138" parent="globals/BoatNavView" pc="268439246" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="139" parent="globals/BoatNavView" pc="268439262" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="140" parent="globals/BoatNavView" pc="268439288" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="141" parent="globals/BoatNavView" pc="268439323" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="142" parent="globals/BoatNavView" pc="268439353" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="149" parent="globals/BoatNavView" pc="268439506" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="150" parent="globals/BoatNavView" pc="268439523" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="151" parent="globals/BoatNavView" pc="268439583" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="152" parent="globals/BoatNavView" pc="268439593" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="153" parent="globals/BoatNavView" pc="268439615" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="154" parent="globals/BoatNavView" pc="268439633" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavView.mc" id="25" lineNum="155" parent="globals/BoatNavView" pc="268439655" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="26" lineNum="17" parent="globals/BoatNavDelegate" pc="268439760" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="26" lineNum="18" parent="globals/BoatNavDelegate" pc="268439762" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="26" lineNum="19" parent="globals/BoatNavDelegate" pc="268439782" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="26" lineNum="20" parent="globals/BoatNavDelegate" pc="268439800" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="26" lineNum="22" parent="globals/BoatNavDelegate" pc="268439806" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="27" lineNum="7" parent="globals/BoatNavDelegate" pc="268439809" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="27" lineNum="8" parent="globals/BoatNavDelegate" pc="268439811" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="27" lineNum="9" parent="globals/BoatNavDelegate" pc="268439829" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="28" lineNum="12" parent="globals/BoatNavDelegate" pc="268439840" symbol="onSelect"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="28" lineNum="13" parent="globals/BoatNavDelegate" pc="268439842" symbol="onSelect"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavDelegate.mc" id="28" lineNum="14" parent="globals/BoatNavDelegate" pc="268439860" symbol="onSelect"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="29" lineNum="13" parent="globals/BoatNavSummaryView" pc="268439863" symbol="onLayout"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="30" lineNum="8" parent="globals/BoatNavSummaryView" pc="268439866" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="30" lineNum="9" parent="globals/BoatNavSummaryView" pc="268439868" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="30" lineNum="10" parent="globals/BoatNavSummaryView" pc="268439886" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="16" parent="globals/BoatNavSummaryView" pc="268439897" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="17" parent="globals/BoatNavSummaryView" pc="268439901" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="18" parent="globals/BoatNavSummaryView" pc="268439920" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="20" parent="globals/BoatNavSummaryView" pc="268439939" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="21" parent="globals/BoatNavSummaryView" pc="268439961" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="23" parent="globals/BoatNavSummaryView" pc="268439973" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="24" parent="globals/BoatNavSummaryView" pc="268439995" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="27" parent="globals/BoatNavSummaryView" pc="268440032" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="28" parent="globals/BoatNavSummaryView" pc="268440048" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="29" parent="globals/BoatNavSummaryView" pc="268440058" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="30" parent="globals/BoatNavSummaryView" pc="268440074" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="31" parent="globals/BoatNavSummaryView" pc="268440084" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="34" parent="globals/BoatNavSummaryView" pc="268440184" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="35" parent="globals/BoatNavSummaryView" pc="268440200" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="36" parent="globals/BoatNavSummaryView" pc="268440216" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="38" parent="globals/BoatNavSummaryView" pc="268440232" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="39" parent="globals/BoatNavSummaryView" pc="268440242" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="41" parent="globals/BoatNavSummaryView" pc="268440252" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="42" parent="globals/BoatNavSummaryView" pc="268440274" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="44" parent="globals/BoatNavSummaryView" pc="268440311" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="47" parent="globals/BoatNavSummaryView" pc="268440348" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="48" parent="globals/BoatNavSummaryView" pc="268440370" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="50" parent="globals/BoatNavSummaryView" pc="268440404" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="53" parent="globals/BoatNavSummaryView" pc="268440458" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="54" parent="globals/BoatNavSummaryView" pc="268440480" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="56" parent="globals/BoatNavSummaryView" pc="268440524" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="57" parent="globals/BoatNavSummaryView" pc="268440546" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="59" parent="globals/BoatNavSummaryView" pc="268440583" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="62" parent="globals/BoatNavSummaryView" pc="268440620" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="63" parent="globals/BoatNavSummaryView" pc="268440642" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="65" parent="globals/BoatNavSummaryView" pc="268440696" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="68" parent="globals/BoatNavSummaryView" pc="268440750" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="31" lineNum="69" parent="globals/BoatNavSummaryView" pc="268440772" symbol="onUpdate"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="32" lineNum="12" parent="globals/BoatNavApp" pc="268440810" symbol="onStart"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="33" lineNum="21" parent="globals/BoatNavApp" pc="268440813" symbol="getInitialView"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="33" lineNum="22" parent="globals/BoatNavApp" pc="268440817" symbol="getInitialView"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="33" lineNum="23" parent="globals/BoatNavApp" pc="268440841" symbol="getInitialView"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="33" lineNum="24" parent="globals/BoatNavApp" pc="268440851" symbol="getInitialView"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="34" lineNum="8" parent="globals/BoatNavApp" pc="268440900" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="34" lineNum="9" parent="globals/BoatNavApp" pc="268440902" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="35" lineNum="15" parent="globals/BoatNavApp" pc="268440921" symbol="onStop"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="35" lineNum="16" parent="globals/BoatNavApp" pc="268440923" symbol="onStop"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavApp.mc" id="35" lineNum="17" parent="globals/BoatNavApp" pc="268440936" symbol="onStop"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="36" lineNum="79" parent="globals/BoatNavSummaryDelegate" pc="268440958" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="36" lineNum="80" parent="globals/BoatNavSummaryDelegate" pc="268440960" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="36" lineNum="81" parent="globals/BoatNavSummaryDelegate" pc="268440981" symbol="onBack"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="37" lineNum="75" parent="globals/BoatNavSummaryDelegate" pc="268440984" symbol="initialize"/>
+        <entry filename="/Users/oskar/BoatNav/source/BoatNavSummaryView.mc" id="37" lineNum="76" parent="globals/BoatNavSummaryDelegate" pc="268440986" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="24" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;"/>
+        <entry field="true" id="16" symbol="&lt;globals/BoatNavView/&lt;&gt;_maxSpeedKnots&gt;"/>
+        <entry field="true" id="22" symbol="&lt;globals/BoatNavView/&lt;&gt;_tracking&gt;"/>
+        <entry id="32" method="true" symbol="isTracking"/>
+        <entry field="true" id="14" symbol="&lt;globals/BoatNavView/&lt;&gt;_lat&gt;"/>
+        <entry id="31" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;headingToCardinal&gt;"/>
+        <entry id="30" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;"/>
+        <entry id="33" method="true" symbol="onPosition"/>
+        <entry id="9" object="true" symbol="BoatNavView"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="5" object="true" symbol="BoatNavApp"/>
+        <entry field="true" id="41" symbol="AppName"/>
+        <entry id="28" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="7" object="true" symbol="BoatNavSummaryDelegate"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="6" object="true" symbol="BoatNavDelegate"/>
+        <entry field="true" id="11" symbol="&lt;globals/BoatNavView/&lt;&gt;_gpsQuality&gt;"/>
+        <entry id="25" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;"/>
+        <entry field="true" id="18" symbol="&lt;globals/BoatNavView/&lt;&gt;_prevLon&gt;"/>
+        <entry field="true" id="13" symbol="&lt;globals/BoatNavView/&lt;&gt;_headingRad&gt;"/>
+        <entry field="true" id="20" symbol="&lt;globals/BoatNavView/&lt;&gt;_startTime&gt;"/>
+        <entry id="26" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="19" symbol="&lt;globals/BoatNavView/&lt;&gt;_speedKnots&gt;"/>
+        <entry field="true" id="21" symbol="&lt;globals/BoatNavView/&lt;&gt;_timer&gt;"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="35" method="true" symbol="stopGps"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="17" symbol="&lt;globals/BoatNavView/&lt;&gt;_prevLat&gt;"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="23" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;"/>
+        <entry field="true" id="40" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="27" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;"/>
+        <entry id="36" method="true" symbol="toggleTracking"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="12" symbol="&lt;globals/BoatNavView/&lt;&gt;_hasFirstFix&gt;"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="10" symbol="&lt;globals/BoatNavView/&lt;&gt;_distanceNm&gt;"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8" object="true" symbol="BoatNavSummaryView"/>
+        <entry id="8388646" module="true" object="true" symbol="Timer"/>
+        <entry id="8388642" module="true" symbol="Position"/>
+        <entry field="true" id="15" symbol="&lt;globals/BoatNavView/&lt;&gt;_lon&gt;"/>
+        <entry field="true" id="39" symbol="&lt;globals/BoatNavApp/&lt;&gt;_view&gt;"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry id="34" method="true" symbol="onTimer"/>
+        <entry id="29" method="true" symbol="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;"/>
+        <entry field="true" id="38" symbol="&lt;globals/BoatNavSummaryView/&lt;&gt;_stats&gt;"/>
+        <entry field="true" id="37" symbol="&lt;globals/BoatNavDelegate/&lt;&gt;_view&gt;"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435938" name="dc" stackId="1" startPc="268435579"/>
+        <entry arg="true" endPc="268435938" name="cx" stackId="2" startPc="268435579"/>
+        <entry arg="true" endPc="268435938" name="cy" stackId="3" startPc="268435579"/>
+        <entry endPc="268435937" name="y1" stackId="4" startPc="268435583"/>
+        <entry endPc="268435937" name="y2" stackId="5" startPc="268435583"/>
+        <entry endPc="268435872" name="nmX" stackId="6" startPc="268435614"/>
+        <entry endPc="268435872" name="coordX" stackId="7" startPc="268435614"/>
+        <entry arg="true" endPc="268436320" name="info" stackId="1" startPc="268435939"/>
+        <entry endPc="268436300" name="deg" stackId="2" startPc="268436110"/>
+        <entry endPc="268436300" name="newLat" stackId="3" startPc="268436110"/>
+        <entry endPc="268436300" name="newLon" stackId="4" startPc="268436110"/>
+        <entry arg="true" endPc="268436655" name="dc" stackId="1" startPc="268436321"/>
+        <entry arg="true" endPc="268436655" name="cx" stackId="2" startPc="268436321"/>
+        <entry arg="true" endPc="268436655" name="cy" stackId="3" startPc="268436321"/>
+        <entry endPc="268436654" name="x" stackId="4" startPc="268436325"/>
+        <entry endPc="268436654" name="y" stackId="5" startPc="268436325"/>
+        <entry endPc="268436654" name="color" stackId="6" startPc="268436325"/>
+        <entry arg="true" endPc="268436908" name="deg" stackId="1" startPc="268436656"/>
+        <entry endPc="268436908" name="labels" stackId="2" startPc="268436660"/>
+        <entry arg="true" endPc="268437166" name="deg" stackId="1" startPc="268436964"/>
+        <entry arg="true" endPc="268437166" name="isLat" stackId="2" startPc="268436964"/>
+        <entry endPc="268437166" name="dir" stackId="3" startPc="268436968"/>
+        <entry endPc="268437166" name="abs" stackId="4" startPc="268436968"/>
+        <entry endPc="268437166" name="d" stackId="5" startPc="268436968"/>
+        <entry endPc="268437166" name="m" stackId="6" startPc="268436968"/>
+        <entry arg="true" endPc="268437584" name="lat1" stackId="1" startPc="268437293"/>
+        <entry arg="true" endPc="268437584" name="lon1" stackId="2" startPc="268437293"/>
+        <entry arg="true" endPc="268437584" name="lat2" stackId="3" startPc="268437293"/>
+        <entry arg="true" endPc="268437584" name="lon2" stackId="4" startPc="268437293"/>
+        <entry endPc="268437584" name="R" stackId="5" startPc="268437297"/>
+        <entry endPc="268437584" name="dLat" stackId="6" startPc="268437297"/>
+        <entry endPc="268437584" name="dLon" stackId="7" startPc="268437297"/>
+        <entry endPc="268437584" name="a" stackId="8" startPc="268437297"/>
+        <entry arg="true" endPc="268437839" name="dc" stackId="1" startPc="268437596"/>
+        <entry arg="true" endPc="268437839" name="cx" stackId="2" startPc="268437596"/>
+        <entry arg="true" endPc="268437839" name="cy" stackId="3" startPc="268437596"/>
+        <entry endPc="268437838" name="deg" stackId="4" startPc="268437600"/>
+        <entry endPc="268437997" name="t" stackId="1" startPc="268437856"/>
+        <entry endPc="268438295" name="elapsed" stackId="2" startPc="268438001"/>
+        <entry endPc="268438295" name="avgSpeed" stackId="3" startPc="268438001"/>
+        <entry endPc="268438295" name="stats" stackId="4" startPc="268438001"/>
+        <entry arg="true" endPc="268438488" name="dc" stackId="1" startPc="268438313"/>
+        <entry arg="true" endPc="268438488" name="cx" stackId="2" startPc="268438313"/>
+        <entry arg="true" endPc="268438488" name="cy" stackId="3" startPc="268438313"/>
+        <entry endPc="268438487" name="speedStr" stackId="4" startPc="268438317"/>
+        <entry arg="true" endPc="268438983" name="dc" stackId="1" startPc="268438510"/>
+        <entry arg="true" endPc="268438983" name="cx" stackId="2" startPc="268438510"/>
+        <entry arg="true" endPc="268438983" name="cy" stackId="3" startPc="268438510"/>
+        <entry arg="true" endPc="268438983" name="r" stackId="4" startPc="268438510"/>
+        <entry endPc="268438982" name="h" stackId="5" startPc="268438514"/>
+        <entry endPc="268438982" name="tipR" stackId="6" startPc="268438514"/>
+        <entry endPc="268438982" name="baseR" stackId="7" startPc="268438514"/>
+        <entry endPc="268438982" name="tipX" stackId="8" startPc="268438514"/>
+        <entry endPc="268438982" name="tipY" stackId="9" startPc="268438514"/>
+        <entry endPc="268438982" name="bcx" stackId="10" startPc="268438514"/>
+        <entry endPc="268438982" name="bcy" stackId="11" startPc="268438514"/>
+        <entry endPc="268438982" name="hw" stackId="12" startPc="268438514"/>
+        <entry endPc="268438982" name="p1x" stackId="13" startPc="268438514"/>
+        <entry endPc="268438982" name="p1y" stackId="14" startPc="268438514"/>
+        <entry endPc="268438982" name="p2x" stackId="15" startPc="268438514"/>
+        <entry endPc="268438982" name="p2y" stackId="16" startPc="268438514"/>
+        <entry arg="true" endPc="268439182" name="dc" stackId="1" startPc="268438984"/>
+        <entry endPc="268439181" name="cx" stackId="2" startPc="268438988"/>
+        <entry endPc="268439181" name="cy" stackId="3" startPc="268438988"/>
+        <entry endPc="268439181" name="r" stackId="4" startPc="268438988"/>
+        <entry arg="true" endPc="268439759" name="dc" stackId="1" startPc="268439202"/>
+        <entry arg="true" endPc="268439759" name="cx" stackId="2" startPc="268439202"/>
+        <entry arg="true" endPc="268439759" name="cy" stackId="3" startPc="268439202"/>
+        <entry arg="true" endPc="268439759" name="r" stackId="4" startPc="268439202"/>
+        <entry endPc="268439505" name="i" stackId="5" startPc="268439224"/>
+        <entry endPc="268439492" name="a" stackId="6" startPc="268439224"/>
+        <entry endPc="268439492" name="isMajor" stackId="7" startPc="268439224"/>
+        <entry endPc="268439492" name="innerR" stackId="8" startPc="268439224"/>
+        <entry endPc="268439758" name="cardinals" stackId="9" startPc="268439206"/>
+        <entry endPc="268439758" name="labelR" stackId="10" startPc="268439206"/>
+        <entry endPc="268439758" name="i" stackId="11" startPc="268439633"/>
+        <entry endPc="268439745" name="a" stackId="12" startPc="268439633"/>
+        <entry arg="true" endPc="268439839" name="view" stackId="1" startPc="268439809"/>
+        <entry arg="true" endPc="268439896" name="stats" stackId="1" startPc="268439866"/>
+        <entry arg="true" endPc="268440809" name="dc" stackId="1" startPc="268439897"/>
+        <entry endPc="268440808" name="cx" stackId="2" startPc="268439901"/>
+        <entry endPc="268440808" name="cy" stackId="3" startPc="268439901"/>
+        <entry endPc="268440808" name="elapsed" stackId="4" startPc="268439901"/>
+        <entry endPc="268440808" name="h" stackId="5" startPc="268439901"/>
+        <entry endPc="268440808" name="m" stackId="6" startPc="268439901"/>
+        <entry endPc="268440808" name="s" stackId="7" startPc="268439901"/>
+        <entry endPc="268440808" name="timeStr" stackId="8" startPc="268439901"/>
+        <entry endPc="268440808" name="distance" stackId="9" startPc="268439901"/>
+        <entry endPc="268440808" name="avgSpeed" stackId="10" startPc="268439901"/>
+        <entry endPc="268440808" name="maxSpeed" stackId="11" startPc="268439901"/>
+        <entry endPc="268440808" name="c1" stackId="12" startPc="268439901"/>
+        <entry endPc="268440808" name="c2" stackId="13" startPc="268439901"/>
+        <entry endPc="268440899" name="view" stackId="1" startPc="268440817"/>
+        <entry arg="true" endPc="268440957" name="state" stackId="1" startPc="268440921"/>
+    </localVars>
+    <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B3225-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="55" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/BoatNavView" offset="142" parentId="globals" symbolId="BoatNavView" type="class"/>
+        <dataEntry label="globals/BoatNavDelegate" offset="437" parentId="globals" symbolId="BoatNavDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="508" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/BoatNavSummaryView" offset="555" parentId="globals" symbolId="BoatNavSummaryView" type="class"/>
+        <dataEntry label="globals/BoatNavApp" offset="626" parentId="globals" symbolId="BoatNavApp" type="class"/>
+        <dataEntry label="globals/BoatNavSummaryDelegate" offset="705" parentId="globals" symbolId="BoatNavSummaryDelegate" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="760" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="799" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435478" name="&lt;init&gt;" parent="BoatNavView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435497" name="&lt;init&gt;" parent="BoatNavDelegate" startPc="268435479">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435521" name="&lt;init&gt;" parent="Rez" startPc="268435498">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435540" name="&lt;init&gt;" parent="BoatNavSummaryView" startPc="268435522">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435559" name="&lt;init&gt;" parent="BoatNavApp" startPc="268435541">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435578" name="&lt;init&gt;" parent="BoatNavSummaryDelegate" startPc="268435560">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268435938" name="&lt;globals/BoatNavView/&lt;&gt;drawBottomData&gt;" parent="BoatNavView" startPc="268435579">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436320" name="onPosition" parent="BoatNavView" startPc="268435939">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436655" name="&lt;globals/BoatNavView/&lt;&gt;drawGpsIcon&gt;" parent="BoatNavView" startPc="268436321">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436908" name="&lt;globals/BoatNavView/&lt;&gt;headingToCardinal&gt;" parent="BoatNavView" startPc="268436656">
+            <param id="deg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436963" name="onHide" parent="BoatNavView" startPc="268436909">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437166" name="&lt;globals/BoatNavView/&lt;&gt;formatCoord&gt;" parent="BoatNavView" startPc="268436964">
+            <param id="deg"/>
+            <param id="isLat"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437206" name="onShow" parent="BoatNavView" startPc="268437167">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437209" name="onLayout" parent="BoatNavView" startPc="268437207">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437292" name="stopGps" parent="BoatNavView" startPc="268437210">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437584" name="&lt;globals/BoatNavView/&lt;&gt;haversineNm&gt;" parent="BoatNavView" startPc="268437293">
+            <param id="lat1"/>
+            <param id="lon1"/>
+            <param id="lat2"/>
+            <param id="lon2"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437595" name="isTracking" parent="BoatNavView" startPc="268437585">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268437839" name="&lt;globals/BoatNavView/&lt;&gt;drawHeadingText&gt;" parent="BoatNavView" startPc="268437596">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438312" name="toggleTracking" parent="BoatNavView" startPc="268437840">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438488" name="&lt;globals/BoatNavView/&lt;&gt;drawSpeed&gt;" parent="BoatNavView" startPc="268438313">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438509" name="initialize" parent="BoatNavView" startPc="268438489">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268438983" name="&lt;globals/BoatNavView/&lt;&gt;drawHeadingArrow&gt;" parent="BoatNavView" startPc="268438510">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="r"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439182" name="onUpdate" parent="BoatNavView" startPc="268438984">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439201" name="onTimer" parent="BoatNavView" startPc="268439183">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268439759" name="&lt;globals/BoatNavView/&lt;&gt;drawCompassRing&gt;" parent="BoatNavView" startPc="268439202">
+            <param id="dc"/>
+            <param id="cx"/>
+            <param id="cy"/>
+            <param id="r"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439808" name="onBack" parent="BoatNavDelegate" startPc="268439760">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439839" name="initialize" parent="BoatNavDelegate" startPc="268439809">
+            <param id="view"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439862" name="onSelect" parent="BoatNavDelegate" startPc="268439840">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439865" name="onLayout" parent="BoatNavSummaryView" startPc="268439863">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439896" name="initialize" parent="BoatNavSummaryView" startPc="268439866">
+            <param id="stats"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440809" name="onUpdate" parent="BoatNavSummaryView" startPc="268439897">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440812" name="onStart" parent="BoatNavApp" startPc="268440810">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440899" name="getInitialView" parent="BoatNavApp" startPc="268440813">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440920" name="initialize" parent="BoatNavApp" startPc="268440900">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440957" name="onStop" parent="BoatNavApp" startPc="268440921">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440983" name="onBack" parent="BoatNavSummaryDelegate" startPc="268440958">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268441004" name="initialize" parent="BoatNavSummaryDelegate" startPc="268440984">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

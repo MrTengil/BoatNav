@@ -1,0 +1,1788 @@
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Activity,1,14,22]; ]
+import Toybox.Activity;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Graphics,2,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Math,4,14,18]; ]
+import Toybox.Math;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [Position,5,14,22]; ]
+import Toybox.Position;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [WatchUi,6,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 8; @symbol_classdef = [BoatNavView,8,6,17]; @symbol_extends<0> = [WatchUi,8,26,33]; @symbol_extends<1> = [View,8,34,38]; ]
+class BoatNavView extends WatchUi.View {
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 9; @position = 16; @symbol_vardef = [_headingRad,9,16,27]; @symbol_type<0> = [Float,9,31,36]; ]
+    private
+    var _headingRad as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 10; @position = 16; @symbol_vardef = [_speedKnots,10,16,27]; @symbol_type<0> = [Float,10,31,36]; ]
+    private
+    var _speedKnots as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 11; @position = 16; @symbol_vardef = [_lat,11,16,20]; @symbol_type<0> = [Float,11,24,29]; ]
+    private
+    var _lat as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 12; @position = 16; @symbol_vardef = [_lon,12,16,20]; @symbol_type<0> = [Float,12,24,29]; ]
+    private
+    var _lon as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 13; @position = 16; @symbol_vardef = [_distanceNm,13,16,27]; @symbol_type<0> = [Float,13,31,36]; ]
+    private
+    var _distanceNm as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 14; @position = 16; @symbol_vardef = [_prevLat,14,16,24]; @symbol_type<0> = [Float,14,28,33]; ]
+    private
+    var _prevLat as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 15; @position = 16; @symbol_vardef = [_prevLon,15,16,24]; @symbol_type<0> = [Float,15,28,33]; ]
+    private
+    var _prevLon as Float = 0.0f;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 16; @position = 16; @symbol_vardef = [_hasFirstFix,16,16,28]; @symbol_type<0> = [Boolean,16,32,39]; ]
+    private
+    var _hasFirstFix as Boolean = false;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 18; @symbol_functiondef = [initialize,18,13,23]; ]
+    function initialize() as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_18_26_20_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 19 8 ]
+        symbol [ View %tmp.2 19 8 12 ];
+        %tmp.2 = getv ? :View;
+        symbol [ initialize %tmp.3 19 13 23 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_oskar_BoatNav_source_BoatNavView_mc_18_26_20_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 22; @symbol_functiondef = [onLayout,22,13,21]; @symbol_param<0> = [dc,22,22,24]; @symbol_param<0>_type<0> = [Dc,22,28,30]; ]
+    function onLayout(dc as Dc) as Void {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 25; @symbol_functiondef = [onShow,25,13,19]; ]
+    function onShow() as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_25_30_27_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 26 8 ]
+        symbol [ Position %tmp.1 26 8 16 ];
+        %tmp.1 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.2 26 17 37 ];
+        %tmp.2 = getv function %tmp.1 :enableLocationEvents;
+        symbol [ Position %tmp.3 26 38 46 ];
+        %tmp.3 = getm $.Toybox.Position;
+        symbol [ LOCATION_CONTINUOUS %tmp.4 26 47 66 ];
+        %tmp.4 = getv %tmp.3 :LOCATION_CONTINUOUS;
+        %tmp.5 = self;
+        symbol [ method %tmp.6 26 68 74 ];
+        %tmp.6 = getv function %tmp.5 :method;
+        %tmp.8 = const :onPosition;
+        symbol [ onPosition %tmp.8 26 76 86 const ];
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.9);
+_Users_oskar_BoatNav_source_BoatNavView_mc_25_30_27_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 29; @symbol_functiondef = [onHide,29,13,19]; ]
+    function onHide() as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_29_30_31_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 30 8 ]
+        symbol [ Position %tmp.1 30 8 16 ];
+        %tmp.1 = getm $.Toybox.Position;
+        symbol [ enableLocationEvents %tmp.2 30 17 37 ];
+        %tmp.2 = getv function %tmp.1 :enableLocationEvents;
+        symbol [ Position %tmp.3 30 38 46 ];
+        %tmp.3 = getm $.Toybox.Position;
+        symbol [ LOCATION_DISABLE %tmp.4 30 47 63 ];
+        %tmp.4 = getv %tmp.3 :LOCATION_DISABLE;
+        %tmp.5 = self;
+        symbol [ method %tmp.6 30 65 71 ];
+        %tmp.6 = getv function %tmp.5 :method;
+        %tmp.8 = const :onPosition;
+        symbol [ onPosition %tmp.8 30 73 83 const ];
+        %tmp.9 = invoke %tmp.5 %tmp.6(%tmp.8);
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.9);
+_Users_oskar_BoatNav_source_BoatNavView_mc_29_30_31_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 33; @symbol_functiondef = [onPosition,33,13,23]; @symbol_param<0> = [info,33,24,28]; @symbol_param<0>_type<0> = [Position,33,32,40]; @symbol_param<0>_type<1> = [Info,33,41,45]; ]
+    function onPosition(info as Position.Info) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_33_55_52_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 34 8 ]
+_Users_oskar_BoatNav_source_BoatNavView_mc_34_8_36_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        symbol [ info %tmp.1 34 12 16 ];
+        symbol [ speed %tmp.2 34 17 22 ];
+        %tmp.2 = getv %tmp.1 :speed;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_oskar_BoatNav_source_BoatNavView_mc_34_8_36_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_34_8_36_8_if_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_34_32_36_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 35 12 ]
+        %tmp.5 = lgetv %info;
+        symbol [ info %tmp.5 35 27 31 ];
+        symbol [ speed %tmp.6 35 32 37 ];
+        %tmp.6 = getv %tmp.5 :speed;
+        %tmp.7 = 1.94384f;
+        %tmp.8 = mul %tmp.6 %tmp.7;
+        symbol [ toFloat %tmp.9 35 50 57 ];
+        %tmp.9 = getv function %tmp.8 :toFloat;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        symbol [ _speedKnots ? 35 12 23 ];
+        putv self :_speedKnots %tmp.10;
+_Users_oskar_BoatNav_source_BoatNavView_mc_34_32_36_8_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_34_8_36_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_34_8_36_8_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 37 8 ]
+_Users_oskar_BoatNav_source_BoatNavView_mc_37_8_39_8_if_stmt:
+        %tmp.11 = lgetv %info;
+        symbol [ info %tmp.11 37 12 16 ];
+        symbol [ heading %tmp.12 37 17 24 ];
+        %tmp.12 = getv %tmp.11 :heading;
+        %tmp.13 = null;
+        %tmp.14 = ne %tmp.12 %tmp.13;
+        bf %tmp.14 @_Users_oskar_BoatNav_source_BoatNavView_mc_37_8_39_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_37_8_39_8_if_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_37_34_39_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 38 12 ]
+        %tmp.15 = lgetv %info;
+        symbol [ info %tmp.15 38 26 30 ];
+        symbol [ heading %tmp.16 38 31 38 ];
+        %tmp.16 = getv %tmp.15 :heading;
+        symbol [ toFloat %tmp.17 38 39 46 ];
+        %tmp.17 = getv function %tmp.16 :toFloat;
+        %tmp.18 = invoke %tmp.16 %tmp.17();
+        symbol [ _headingRad ? 38 12 23 ];
+        putv self :_headingRad %tmp.18;
+_Users_oskar_BoatNav_source_BoatNavView_mc_37_34_39_8_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_37_8_39_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_37_8_39_8_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 40 8 ]
+_Users_oskar_BoatNav_source_BoatNavView_mc_40_8_50_8_if_stmt:
+        %tmp.19 = lgetv %info;
+        symbol [ info %tmp.19 40 12 16 ];
+        symbol [ position %tmp.20 40 17 25 ];
+        %tmp.20 = getv %tmp.19 :position;
+        %tmp.21 = null;
+        %tmp.22 = ne %tmp.20 %tmp.21;
+        bf %tmp.22 @_Users_oskar_BoatNav_source_BoatNavView_mc_40_8_50_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_40_8_50_8_if_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_40_35_50_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 41 12 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_40_35_50_8_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_40_35_50_8_stop" ]
+        %deg.1 = local;
+        symbol [ deg %deg.1 41 16 19 ];
+        %tmp.23 = lgetv %info;
+        symbol [ info %tmp.23 41 22 26 ];
+        symbol [ position %tmp.24 41 27 35 ];
+        %tmp.24 = getv %tmp.23 :position;
+        symbol [ toDegrees %tmp.25 41 36 45 ];
+        %tmp.25 = getv function %tmp.24 :toDegrees;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        lputv %deg.1 %tmp.26;
+        symbol [ deg %deg.1 41 16 19 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 42 12 ]
+        %tmp.27 = lgetv %deg.1;
+        symbol [ deg %tmp.27 42 19 22 ];
+        %tmp.28 = 0;
+        %tmp.29 = agetv %tmp.27 %tmp.28;
+        symbol [ toFloat %tmp.30 42 26 33 ];
+        %tmp.30 = getv function %tmp.29 :toFloat;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        symbol [ _lat ? 42 12 16 ];
+        putv self :_lat %tmp.31;
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 43 12 ]
+        %tmp.32 = lgetv %deg.1;
+        symbol [ deg %tmp.32 43 19 22 ];
+        %tmp.33 = 1;
+        %tmp.34 = agetv %tmp.32 %tmp.33;
+        symbol [ toFloat %tmp.35 43 26 33 ];
+        %tmp.35 = getv function %tmp.34 :toFloat;
+        %tmp.36 = invoke %tmp.34 %tmp.35();
+        symbol [ _lon ? 43 12 16 ];
+        putv self :_lon %tmp.36;
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 44 12 ]
+_Users_oskar_BoatNav_source_BoatNavView_mc_44_12_46_12_if_stmt:
+        symbol [ _hasFirstFix %tmp.38 44 16 28 ];
+        %tmp.38 = getv ? :_hasFirstFix;
+        bf %tmp.38 @_Users_oskar_BoatNav_source_BoatNavView_mc_44_12_46_12_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_44_12_46_12_if_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_44_30_46_12_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 45 16 ]
+        symbol [ _distanceNm %tmp.39 45 16 27 ];
+        %tmp.39 = getv self :_distanceNm;
+        %tmp.40 = self;
+        symbol [ haversineNm %tmp.41 45 31 42 ];
+        %tmp.41 = getv function %tmp.40 :haversineNm;
+        symbol [ _prevLat %tmp.43 45 43 51 ];
+        %tmp.43 = getv ? :_prevLat;
+        symbol [ _prevLon %tmp.45 45 53 61 ];
+        %tmp.45 = getv ? :_prevLon;
+        symbol [ _lat %tmp.47 45 63 67 ];
+        %tmp.47 = getv ? :_lat;
+        symbol [ _lon %tmp.49 45 69 73 ];
+        %tmp.49 = getv ? :_lon;
+        %tmp.50 = invoke %tmp.40 %tmp.41(%tmp.43, %tmp.45, %tmp.47, %tmp.49);
+        %tmp.51 = add %tmp.39 %tmp.50;
+        symbol [ _distanceNm ? 45 16 27 ];
+        putv self :_distanceNm dup %tmp.51;
+_Users_oskar_BoatNav_source_BoatNavView_mc_44_30_46_12_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_44_12_46_12_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_44_12_46_12_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 47 12 ]
+        symbol [ _lat %tmp.53 47 23 27 ];
+        %tmp.53 = getv ? :_lat;
+        symbol [ _prevLat ? 47 12 20 ];
+        putv self :_prevLat %tmp.53;
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 48 12 ]
+        symbol [ _lon %tmp.55 48 23 27 ];
+        %tmp.55 = getv ? :_lon;
+        symbol [ _prevLon ? 48 12 20 ];
+        putv self :_prevLon %tmp.55;
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 49 12 ]
+        %tmp.56 = true;
+        symbol [ _hasFirstFix ? 49 12 24 ];
+        putv self :_hasFirstFix %tmp.56;
+_Users_oskar_BoatNav_source_BoatNavView_mc_40_35_50_8_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_40_8_50_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_40_8_50_8_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 51 8 ]
+        symbol [ WatchUi %tmp.57 51 8 15 ];
+        %tmp.57 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.58 51 16 29 ];
+        %tmp.58 = getv function %tmp.57 :requestUpdate;
+        invoke %tmp.57 %tmp.58();
+_Users_oskar_BoatNav_source_BoatNavView_mc_33_55_52_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 54; @symbol_functiondef = [onUpdate,54,13,21]; @symbol_param<0> = [dc,54,22,24]; @symbol_param<0>_type<0> = [Dc,54,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 55 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_stop" ]
+        %cx.1 = local;
+        symbol [ cx %cx.1 55 12 14 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 55 17 19 ];
+        symbol [ getWidth %tmp.2 55 20 28 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = 2;
+        %tmp.5 = div %tmp.3 %tmp.4;
+        lputv %cx.1 %tmp.5;
+        symbol [ cx %cx.1 55 12 14 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 56 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_stop" ]
+        %cy.2 = local;
+        symbol [ cy %cy.2 56 12 14 ];
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 56 17 19 ];
+        symbol [ getHeight %tmp.7 56 20 29 ];
+        %tmp.7 = getv function %tmp.6 :getHeight;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        lputv %cy.2 %tmp.10;
+        symbol [ cy %cy.2 56 12 14 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 57 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_stop" ]
+        %r.3 = local;
+        symbol [ r %r.3 57 12 13 ];
+        %tmp.11 = lgetv %cx.1;
+        symbol [ cx %tmp.11 57 16 18 ];
+        %tmp.12 = 4;
+        %tmp.13 = sub %tmp.11 %tmp.12;
+        lputv %r.3 %tmp.13;
+        symbol [ r %r.3 57 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 59 8 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 59 8 10 ];
+        symbol [ setColor %tmp.15 59 11 19 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        symbol [ Graphics %tmp.16 59 20 28 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.17 59 29 46 ];
+        %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
+        symbol [ Graphics %tmp.18 59 48 56 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.19 59 57 68 ];
+        %tmp.19 = getv %tmp.18 :COLOR_BLACK;
+        invoke %tmp.14 %tmp.15(%tmp.17, %tmp.19);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 60 8 ]
+        %tmp.20 = lgetv %dc;
+        symbol [ dc %tmp.20 60 8 10 ];
+        symbol [ clear %tmp.21 60 11 16 ];
+        %tmp.21 = getv function %tmp.20 :clear;
+        invoke %tmp.20 %tmp.21();
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 62 8 ]
+        %tmp.22 = self;
+        symbol [ drawCompassRing %tmp.23 62 8 23 ];
+        %tmp.23 = getv function %tmp.22 :drawCompassRing;
+        %tmp.24 = lgetv %dc;
+        symbol [ dc %tmp.24 62 24 26 ];
+        %tmp.25 = lgetv %cx.1;
+        symbol [ cx %tmp.25 62 28 30 ];
+        %tmp.26 = lgetv %cy.2;
+        symbol [ cy %tmp.26 62 32 34 ];
+        %tmp.27 = lgetv %r.3;
+        symbol [ r %tmp.27 62 36 37 ];
+        invoke %tmp.22 %tmp.23(%tmp.24, %tmp.25, %tmp.26, %tmp.27);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 63 8 ]
+        %tmp.28 = self;
+        symbol [ drawHeadingArrow %tmp.29 63 8 24 ];
+        %tmp.29 = getv function %tmp.28 :drawHeadingArrow;
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 63 25 27 ];
+        %tmp.31 = lgetv %cx.1;
+        symbol [ cx %tmp.31 63 29 31 ];
+        %tmp.32 = lgetv %cy.2;
+        symbol [ cy %tmp.32 63 33 35 ];
+        %tmp.33 = lgetv %r.3;
+        symbol [ r %tmp.33 63 37 38 ];
+        invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31, %tmp.32, %tmp.33);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 64 8 ]
+        %tmp.34 = self;
+        symbol [ drawHeadingText %tmp.35 64 8 23 ];
+        %tmp.35 = getv function %tmp.34 :drawHeadingText;
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 64 24 26 ];
+        %tmp.37 = lgetv %cx.1;
+        symbol [ cx %tmp.37 64 28 30 ];
+        %tmp.38 = lgetv %cy.2;
+        symbol [ cy %tmp.38 64 32 34 ];
+        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 65 8 ]
+        %tmp.39 = self;
+        symbol [ drawSpeed %tmp.40 65 8 17 ];
+        %tmp.40 = getv function %tmp.39 :drawSpeed;
+        %tmp.41 = lgetv %dc;
+        symbol [ dc %tmp.41 65 18 20 ];
+        %tmp.42 = lgetv %cx.1;
+        symbol [ cx %tmp.42 65 22 24 ];
+        %tmp.43 = lgetv %cy.2;
+        symbol [ cy %tmp.43 65 26 28 ];
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.42, %tmp.43);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 66 8 ]
+        %tmp.44 = self;
+        symbol [ drawBottomData %tmp.45 66 8 22 ];
+        %tmp.45 = getv function %tmp.44 :drawBottomData;
+        %tmp.46 = lgetv %dc;
+        symbol [ dc %tmp.46 66 23 25 ];
+        %tmp.47 = lgetv %cx.1;
+        symbol [ cx %tmp.47 66 27 29 ];
+        %tmp.48 = lgetv %cy.2;
+        symbol [ cy %tmp.48 66 31 33 ];
+        invoke %tmp.44 %tmp.45(%tmp.46, %tmp.47, %tmp.48);
+_Users_oskar_BoatNav_source_BoatNavView_mc_54_40_67_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 69; @symbol_functiondef = [drawCompassRing,69,21,36]; @symbol_param<0> = [dc,69,37,39]; @symbol_param<0>_type<0> = [Dc,69,43,45]; @symbol_param<1> = [cx,69,47,49]; @symbol_param<1>_type<0> = [Number,69,53,59]; @symbol_param<2> = [cy,69,61,63]; @symbol_param<2>_type<0> = [Number,69,67,73]; @symbol_param<3> = [r,69,75,76]; @symbol_param<3>_type<0> = [Number,69,80,86]; ]
+    private
+    function drawCompassRing(dc as Dc, cx as Number, cy as Number, r as Number) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 70 8 ]
+        for @_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_test @_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_incr @_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_init:
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_begin" "_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_end" ]
+        %i.1 = local;
+        symbol [ i %i.1 70 17 18 ];
+        %tmp.1 = 0;
+        lputv %i.1 %tmp.1;
+        symbol [ i %i.1 70 17 18 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_test:
+        %tmp.2 = lgetv %i.1;
+        symbol [ i %tmp.2 70 24 25 ];
+        %tmp.3 = 12;
+        %tmp.4 = lt %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_begin:
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 71 12 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_stop" ]
+        %a.2 = local;
+        symbol [ a %a.2 71 16 17 ];
+        %tmp.5 = lgetv %i.1;
+        symbol [ i %tmp.5 71 20 21 ];
+        %tmp.6 = 30;
+        %tmp.7 = mul %tmp.5 %tmp.6;
+        symbol [ Math %tmp.8 71 29 33 ];
+        %tmp.8 = getm $.Toybox.Math;
+        symbol [ PI %tmp.9 71 34 36 ];
+        %tmp.9 = getv %tmp.8 :PI;
+        %tmp.10 = mul %tmp.7 %tmp.9;
+        %tmp.11 = 180.0;
+        %tmp.12 = div %tmp.10 %tmp.11;
+        lputv %a.2 %tmp.12;
+        symbol [ a %a.2 71 16 17 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 72 12 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_stop" ]
+        %isMajor.3 = local;
+        symbol [ isMajor %isMajor.3 72 16 23 ];
+        %tmp.13 = lgetv %i.1;
+        symbol [ i %tmp.13 72 27 28 ];
+        %tmp.14 = 3;
+        %tmp.15 = mod %tmp.13 %tmp.14;
+        %tmp.16 = 0;
+        %tmp.17 = eq %tmp.15 %tmp.16;
+        lputv %isMajor.3 %tmp.17;
+        symbol [ isMajor %isMajor.3 72 16 23 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 73 12 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_stop" ]
+        %innerR.4 = local;
+        symbol [ innerR %innerR.4 73 16 22 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_begin:
+        %tmp.18 = lgetv %isMajor.3;
+        symbol [ isMajor %tmp.18 73 25 32 ];
+        bf %tmp.18 @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_true:
+        %tmp.19 = lgetv %r;
+        symbol [ r %tmp.19 73 35 36 ];
+        %tmp.20 = 14;
+        %tmp.21 = sub %tmp.19 %tmp.20;
+        push %tmp.21;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_else_false:
+        %tmp.22 = lgetv %r;
+        symbol [ r %tmp.22 73 44 45 ];
+        %tmp.23 = 8;
+        %tmp.24 = sub %tmp.22 %tmp.23;
+        push %tmp.24;
+_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_end:
+        %tmp.25 = phi [%tmp.18 @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_begin] [%tmp.21 @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_true] [%tmp.24 @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_else_false] [%tmp.25 @_Users_oskar_BoatNav_source_BoatNavView_mc_73_25_73_48_end];
+        lputv %innerR.4 %tmp.25;
+        symbol [ innerR %innerR.4 73 16 22 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 74 12 ]
+        %tmp.26 = lgetv %dc;
+        symbol [ dc %tmp.26 74 12 14 ];
+        symbol [ setColor %tmp.27 74 15 23 ];
+        %tmp.27 = getv function %tmp.26 :setColor;
+_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_begin:
+        %tmp.28 = lgetv %isMajor.3;
+        symbol [ isMajor %tmp.28 74 24 31 ];
+        bf %tmp.28 @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_true:
+        %tmp.29 = 0xAAAAAA;
+        push %tmp.29;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_else_false:
+        %tmp.30 = 0x555555;
+        push %tmp.30;
+_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_end:
+        %tmp.31 = phi [%tmp.28 @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_begin] [%tmp.29 @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_true] [%tmp.30 @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_else_false] [%tmp.31 @_Users_oskar_BoatNav_source_BoatNavView_mc_74_24_74_45_end];
+        symbol [ Graphics %tmp.32 74 55 63 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.33 74 64 81 ];
+        %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
+        invoke %tmp.26 %tmp.27(%tmp.31, %tmp.33);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 75 12 ]
+        %tmp.34 = lgetv %dc;
+        symbol [ dc %tmp.34 75 12 14 ];
+        symbol [ setPenWidth %tmp.35 75 15 26 ];
+        %tmp.35 = getv function %tmp.34 :setPenWidth;
+_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_begin:
+        %tmp.36 = lgetv %isMajor.3;
+        symbol [ isMajor %tmp.36 75 27 34 ];
+        bf %tmp.36 @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_true:
+        %tmp.37 = 2;
+        push %tmp.37;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_else_false:
+        %tmp.38 = 1;
+        push %tmp.38;
+_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_end:
+        %tmp.39 = phi [%tmp.36 @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_begin] [%tmp.37 @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_true] [%tmp.38 @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_else_false] [%tmp.39 @_Users_oskar_BoatNav_source_BoatNavView_mc_75_27_75_41_end];
+        invoke %tmp.34 %tmp.35(%tmp.39);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 76 12 ]
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 76 12 14 ];
+        symbol [ drawLine %tmp.41 76 15 23 ];
+        %tmp.41 = getv function %tmp.40 :drawLine;
+        %tmp.42 = lgetv %cx;
+        symbol [ cx %tmp.42 77 16 18 ];
+        %tmp.43 = lgetv %r;
+        symbol [ r %tmp.43 77 22 23 ];
+        symbol [ Math %tmp.44 77 26 30 ];
+        %tmp.44 = getm $.Toybox.Math;
+        symbol [ sin %tmp.45 77 31 34 ];
+        %tmp.45 = getv function %tmp.44 :sin;
+        %tmp.46 = lgetv %a.2;
+        symbol [ a %tmp.46 77 35 36 ];
+        %tmp.47 = invoke %tmp.44 %tmp.45(%tmp.46);
+        %tmp.48 = mul %tmp.43 %tmp.47;
+        symbol [ toNumber %tmp.49 77 39 47 ];
+        %tmp.49 = getv function %tmp.48 :toNumber;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        %tmp.51 = add %tmp.42 %tmp.50;
+        %tmp.52 = lgetv %cy;
+        symbol [ cy %tmp.52 78 16 18 ];
+        %tmp.53 = lgetv %r;
+        symbol [ r %tmp.53 78 22 23 ];
+        symbol [ Math %tmp.54 78 26 30 ];
+        %tmp.54 = getm $.Toybox.Math;
+        symbol [ cos %tmp.55 78 31 34 ];
+        %tmp.55 = getv function %tmp.54 :cos;
+        %tmp.56 = lgetv %a.2;
+        symbol [ a %tmp.56 78 35 36 ];
+        %tmp.57 = invoke %tmp.54 %tmp.55(%tmp.56);
+        %tmp.58 = mul %tmp.53 %tmp.57;
+        symbol [ toNumber %tmp.59 78 39 47 ];
+        %tmp.59 = getv function %tmp.58 :toNumber;
+        %tmp.60 = invoke %tmp.58 %tmp.59();
+        %tmp.61 = sub %tmp.52 %tmp.60;
+        %tmp.62 = lgetv %cx;
+        symbol [ cx %tmp.62 79 16 18 ];
+        %tmp.63 = lgetv %innerR.4;
+        symbol [ innerR %tmp.63 79 22 28 ];
+        symbol [ Math %tmp.64 79 31 35 ];
+        %tmp.64 = getm $.Toybox.Math;
+        symbol [ sin %tmp.65 79 36 39 ];
+        %tmp.65 = getv function %tmp.64 :sin;
+        %tmp.66 = lgetv %a.2;
+        symbol [ a %tmp.66 79 40 41 ];
+        %tmp.67 = invoke %tmp.64 %tmp.65(%tmp.66);
+        %tmp.68 = mul %tmp.63 %tmp.67;
+        symbol [ toNumber %tmp.69 79 44 52 ];
+        %tmp.69 = getv function %tmp.68 :toNumber;
+        %tmp.70 = invoke %tmp.68 %tmp.69();
+        %tmp.71 = add %tmp.62 %tmp.70;
+        %tmp.72 = lgetv %cy;
+        symbol [ cy %tmp.72 80 16 18 ];
+        %tmp.73 = lgetv %innerR.4;
+        symbol [ innerR %tmp.73 80 22 28 ];
+        symbol [ Math %tmp.74 80 31 35 ];
+        %tmp.74 = getm $.Toybox.Math;
+        symbol [ cos %tmp.75 80 36 39 ];
+        %tmp.75 = getv function %tmp.74 :cos;
+        %tmp.76 = lgetv %a.2;
+        symbol [ a %tmp.76 80 40 41 ];
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        %tmp.78 = mul %tmp.73 %tmp.77;
+        symbol [ toNumber %tmp.79 80 44 52 ];
+        %tmp.79 = getv function %tmp.78 :toNumber;
+        %tmp.80 = invoke %tmp.78 %tmp.79();
+        %tmp.81 = sub %tmp.72 %tmp.80;
+        invoke %tmp.40 %tmp.41(%tmp.51, %tmp.61, %tmp.71, %tmp.81);
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_37_82_8_stop:
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_incr:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 70 ]
+        %tmp.84 = lgetv %i.1;
+        symbol [ i %tmp.84 70 32 33 ];
+        %tmp.85 = add %tmp.84 1;
+        lputv %i.1 %tmp.85;
+        symbol [ i %i.1 70 32 33 ];
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_test;
+_Users_oskar_BoatNav_source_BoatNavView_mc_70_8_82_8_for_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 83 8 ]
+        %tmp.86 = lgetv %dc;
+        symbol [ dc %tmp.86 83 8 10 ];
+        symbol [ setPenWidth %tmp.87 83 11 22 ];
+        %tmp.87 = getv function %tmp.86 :setPenWidth;
+        %tmp.88 = 1;
+        invoke %tmp.86 %tmp.87(%tmp.88);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 85 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_stop" ]
+        %cardinals.5 = local;
+        symbol [ cardinals %cardinals.5 85 12 21 ];
+        %tmp.89 = newa 4;
+        %tmp.90 = "N";
+        %tmp.91 = dup %tmp.89;
+        %tmp.92 = aputv %tmp.91 0 %tmp.90;
+        %tmp.93 = "E";
+        %tmp.94 = dup %tmp.92;
+        %tmp.95 = aputv %tmp.94 1 %tmp.93;
+        %tmp.96 = "S";
+        %tmp.97 = dup %tmp.95;
+        %tmp.98 = aputv %tmp.97 2 %tmp.96;
+        %tmp.99 = "W";
+        %tmp.100 = dup %tmp.98;
+        %tmp.101 = aputv %tmp.100 3 %tmp.99;
+        lputv %cardinals.5 %tmp.101;
+        symbol [ cardinals %cardinals.5 85 12 21 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 86 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_stop" ]
+        %labelR.6 = local;
+        symbol [ labelR %labelR.6 86 12 18 ];
+        %tmp.102 = lgetv %r;
+        symbol [ r %tmp.102 86 21 22 ];
+        %tmp.103 = 26;
+        %tmp.104 = sub %tmp.102 %tmp.103;
+        lputv %labelR.6 %tmp.104;
+        symbol [ labelR %labelR.6 86 12 18 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 87 8 ]
+        %tmp.105 = lgetv %dc;
+        symbol [ dc %tmp.105 87 8 10 ];
+        symbol [ setColor %tmp.106 87 11 19 ];
+        %tmp.106 = getv function %tmp.105 :setColor;
+        symbol [ Graphics %tmp.107 87 20 28 ];
+        %tmp.107 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.108 87 29 40 ];
+        %tmp.108 = getv %tmp.107 :COLOR_WHITE;
+        symbol [ Graphics %tmp.109 87 42 50 ];
+        %tmp.109 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.110 87 51 68 ];
+        %tmp.110 = getv %tmp.109 :COLOR_TRANSPARENT;
+        invoke %tmp.105 %tmp.106(%tmp.108, %tmp.110);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 88 8 ]
+        for @_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_test @_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_incr @_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_init:
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_begin" "_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_end" ]
+        %i.7 = local;
+        symbol [ i %i.7 88 17 18 ];
+        %tmp.111 = 0;
+        lputv %i.7 %tmp.111;
+        symbol [ i %i.7 88 17 18 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_test:
+        %tmp.112 = lgetv %i.7;
+        symbol [ i %tmp.112 88 24 25 ];
+        %tmp.113 = 4;
+        %tmp.114 = lt %tmp.112 %tmp.113;
+        bf %tmp.114 @_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_begin:
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_36_96_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 89 12 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_88_36_96_8_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_88_36_96_8_stop" ]
+        %a.8 = local;
+        symbol [ a %a.8 89 16 17 ];
+        %tmp.115 = lgetv %i.7;
+        symbol [ i %tmp.115 89 20 21 ];
+        %tmp.116 = 90;
+        %tmp.117 = mul %tmp.115 %tmp.116;
+        symbol [ Math %tmp.118 89 29 33 ];
+        %tmp.118 = getm $.Toybox.Math;
+        symbol [ PI %tmp.119 89 34 36 ];
+        %tmp.119 = getv %tmp.118 :PI;
+        %tmp.120 = mul %tmp.117 %tmp.119;
+        %tmp.121 = 180.0;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        lputv %a.8 %tmp.122;
+        symbol [ a %a.8 89 16 17 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 90 12 ]
+        %tmp.123 = lgetv %dc;
+        symbol [ dc %tmp.123 90 12 14 ];
+        symbol [ drawText %tmp.124 90 15 23 ];
+        %tmp.124 = getv function %tmp.123 :drawText;
+        %tmp.125 = lgetv %cx;
+        symbol [ cx %tmp.125 91 16 18 ];
+        %tmp.126 = lgetv %labelR.6;
+        symbol [ labelR %tmp.126 91 22 28 ];
+        symbol [ Math %tmp.127 91 31 35 ];
+        %tmp.127 = getm $.Toybox.Math;
+        symbol [ sin %tmp.128 91 36 39 ];
+        %tmp.128 = getv function %tmp.127 :sin;
+        %tmp.129 = lgetv %a.8;
+        symbol [ a %tmp.129 91 40 41 ];
+        %tmp.130 = invoke %tmp.127 %tmp.128(%tmp.129);
+        %tmp.131 = mul %tmp.126 %tmp.130;
+        symbol [ toNumber %tmp.132 91 44 52 ];
+        %tmp.132 = getv function %tmp.131 :toNumber;
+        %tmp.133 = invoke %tmp.131 %tmp.132();
+        %tmp.134 = add %tmp.125 %tmp.133;
+        %tmp.135 = lgetv %cy;
+        symbol [ cy %tmp.135 92 16 18 ];
+        %tmp.136 = lgetv %labelR.6;
+        symbol [ labelR %tmp.136 92 22 28 ];
+        symbol [ Math %tmp.137 92 31 35 ];
+        %tmp.137 = getm $.Toybox.Math;
+        symbol [ cos %tmp.138 92 36 39 ];
+        %tmp.138 = getv function %tmp.137 :cos;
+        %tmp.139 = lgetv %a.8;
+        symbol [ a %tmp.139 92 40 41 ];
+        %tmp.140 = invoke %tmp.137 %tmp.138(%tmp.139);
+        %tmp.141 = mul %tmp.136 %tmp.140;
+        symbol [ toNumber %tmp.142 92 44 52 ];
+        %tmp.142 = getv function %tmp.141 :toNumber;
+        %tmp.143 = invoke %tmp.141 %tmp.142();
+        %tmp.144 = sub %tmp.135 %tmp.143;
+        symbol [ Graphics %tmp.145 93 16 24 ];
+        %tmp.145 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.146 93 25 35 ];
+        %tmp.146 = getv %tmp.145 :FONT_XTINY;
+        %tmp.147 = lgetv %cardinals.5;
+        symbol [ cardinals %tmp.147 93 37 46 ];
+        %tmp.148 = lgetv %i.7;
+        symbol [ i %tmp.148 93 47 48 ];
+        %tmp.149 = agetv %tmp.147 %tmp.148;
+        symbol [ Graphics %tmp.150 94 16 24 ];
+        %tmp.150 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.151 94 25 44 ];
+        %tmp.151 = getv %tmp.150 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.152 94 47 55 ];
+        %tmp.152 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.153 94 56 76 ];
+        %tmp.153 = getv %tmp.152 :TEXT_JUSTIFY_VCENTER;
+        %tmp.154 = bitor %tmp.151 %tmp.153;
+        invoke %tmp.123 %tmp.124(%tmp.134, %tmp.144, %tmp.146, %tmp.149, %tmp.154);
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_36_96_8_stop:
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_incr:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 88 ]
+        %tmp.157 = lgetv %i.7;
+        symbol [ i %tmp.157 88 31 32 ];
+        %tmp.158 = add %tmp.157 1;
+        lputv %i.7 %tmp.158;
+        symbol [ i %i.7 88 31 32 ];
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_test;
+_Users_oskar_BoatNav_source_BoatNavView_mc_88_8_96_8_for_end:
+_Users_oskar_BoatNav_source_BoatNavView_mc_69_96_97_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 99; @symbol_functiondef = [drawHeadingArrow,99,21,37]; @symbol_param<0> = [dc,99,38,40]; @symbol_param<0>_type<0> = [Dc,99,44,46]; @symbol_param<1> = [cx,99,48,50]; @symbol_param<1>_type<0> = [Number,99,54,60]; @symbol_param<2> = [cy,99,62,64]; @symbol_param<2>_type<0> = [Number,99,68,74]; @symbol_param<3> = [r,99,76,77]; @symbol_param<3>_type<0> = [Number,99,81,87]; ]
+    private
+    function drawHeadingArrow(dc as Dc, cx as Number, cy as Number, r as Number) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 100 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %h.1 = local;
+        symbol [ h %h.1 100 12 13 ];
+        symbol [ _headingRad %tmp.2 100 16 27 ];
+        %tmp.2 = getv ? :_headingRad;
+        lputv %h.1 %tmp.2;
+        symbol [ h %h.1 100 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 101 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %tipR.2 = local;
+        symbol [ tipR %tipR.2 101 12 16 ];
+        %tmp.3 = lgetv %r;
+        symbol [ r %tmp.3 101 20 21 ];
+        %tmp.4 = 6;
+        %tmp.5 = sub %tmp.3 %tmp.4;
+        symbol [ toFloat %tmp.6 101 27 34 ];
+        %tmp.6 = getv function %tmp.5 :toFloat;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %tipR.2 %tmp.7;
+        symbol [ tipR %tipR.2 101 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 102 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %baseR.3 = local;
+        symbol [ baseR %baseR.3 102 12 17 ];
+        %tmp.8 = lgetv %r;
+        symbol [ r %tmp.8 102 21 22 ];
+        %tmp.9 = 28;
+        %tmp.10 = sub %tmp.8 %tmp.9;
+        symbol [ toFloat %tmp.11 102 29 36 ];
+        %tmp.11 = getv function %tmp.10 :toFloat;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %baseR.3 %tmp.12;
+        symbol [ baseR %baseR.3 102 12 17 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 104 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %tipX.4 = local;
+        symbol [ tipX %tipX.4 104 12 16 ];
+        %tmp.13 = lgetv %cx;
+        symbol [ cx %tmp.13 104 20 22 ];
+        %tmp.14 = lgetv %tipR.2;
+        symbol [ tipR %tmp.14 104 25 29 ];
+        symbol [ Math %tmp.15 104 32 36 ];
+        %tmp.15 = getm $.Toybox.Math;
+        symbol [ sin %tmp.16 104 37 40 ];
+        %tmp.16 = getv function %tmp.15 :sin;
+        %tmp.17 = lgetv %h.1;
+        symbol [ h %tmp.17 104 41 42 ];
+        %tmp.18 = invoke %tmp.15 %tmp.16(%tmp.17);
+        %tmp.19 = mul %tmp.14 %tmp.18;
+        %tmp.20 = add %tmp.13 %tmp.19;
+        symbol [ toNumber %tmp.21 104 45 53 ];
+        %tmp.21 = getv function %tmp.20 :toNumber;
+        %tmp.22 = invoke %tmp.20 %tmp.21();
+        lputv %tipX.4 %tmp.22;
+        symbol [ tipX %tipX.4 104 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 105 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %tipY.5 = local;
+        symbol [ tipY %tipY.5 105 12 16 ];
+        %tmp.23 = lgetv %cy;
+        symbol [ cy %tmp.23 105 20 22 ];
+        %tmp.24 = lgetv %tipR.2;
+        symbol [ tipR %tmp.24 105 25 29 ];
+        symbol [ Math %tmp.25 105 32 36 ];
+        %tmp.25 = getm $.Toybox.Math;
+        symbol [ cos %tmp.26 105 37 40 ];
+        %tmp.26 = getv function %tmp.25 :cos;
+        %tmp.27 = lgetv %h.1;
+        symbol [ h %tmp.27 105 41 42 ];
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        %tmp.29 = mul %tmp.24 %tmp.28;
+        %tmp.30 = sub %tmp.23 %tmp.29;
+        symbol [ toNumber %tmp.31 105 45 53 ];
+        %tmp.31 = getv function %tmp.30 :toNumber;
+        %tmp.32 = invoke %tmp.30 %tmp.31();
+        lputv %tipY.5 %tmp.32;
+        symbol [ tipY %tipY.5 105 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 106 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %bcx.6 = local;
+        symbol [ bcx %bcx.6 106 12 15 ];
+        %tmp.33 = lgetv %cx;
+        symbol [ cx %tmp.33 106 18 20 ];
+        symbol [ toFloat %tmp.34 106 21 28 ];
+        %tmp.34 = getv function %tmp.33 :toFloat;
+        %tmp.35 = invoke %tmp.33 %tmp.34();
+        %tmp.36 = lgetv %baseR.3;
+        symbol [ baseR %tmp.36 106 33 38 ];
+        symbol [ Math %tmp.37 106 41 45 ];
+        %tmp.37 = getm $.Toybox.Math;
+        symbol [ sin %tmp.38 106 46 49 ];
+        %tmp.38 = getv function %tmp.37 :sin;
+        %tmp.39 = lgetv %h.1;
+        symbol [ h %tmp.39 106 50 51 ];
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        %tmp.41 = mul %tmp.36 %tmp.40;
+        %tmp.42 = add %tmp.35 %tmp.41;
+        lputv %bcx.6 %tmp.42;
+        symbol [ bcx %bcx.6 106 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 107 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %bcy.7 = local;
+        symbol [ bcy %bcy.7 107 12 15 ];
+        %tmp.43 = lgetv %cy;
+        symbol [ cy %tmp.43 107 18 20 ];
+        symbol [ toFloat %tmp.44 107 21 28 ];
+        %tmp.44 = getv function %tmp.43 :toFloat;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        %tmp.46 = lgetv %baseR.3;
+        symbol [ baseR %tmp.46 107 33 38 ];
+        symbol [ Math %tmp.47 107 41 45 ];
+        %tmp.47 = getm $.Toybox.Math;
+        symbol [ cos %tmp.48 107 46 49 ];
+        %tmp.48 = getv function %tmp.47 :cos;
+        %tmp.49 = lgetv %h.1;
+        symbol [ h %tmp.49 107 50 51 ];
+        %tmp.50 = invoke %tmp.47 %tmp.48(%tmp.49);
+        %tmp.51 = mul %tmp.46 %tmp.50;
+        %tmp.52 = sub %tmp.45 %tmp.51;
+        lputv %bcy.7 %tmp.52;
+        symbol [ bcy %bcy.7 107 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 109 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %hw.8 = local;
+        symbol [ hw %hw.8 109 12 14 ];
+        %tmp.53 = 9.0f;
+        lputv %hw.8 %tmp.53;
+        symbol [ hw %hw.8 109 12 14 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 110 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %p1x.9 = local;
+        symbol [ p1x %p1x.9 110 12 15 ];
+        %tmp.54 = lgetv %bcx.6;
+        symbol [ bcx %tmp.54 110 19 22 ];
+        %tmp.55 = lgetv %hw.8;
+        symbol [ hw %tmp.55 110 25 27 ];
+        symbol [ Math %tmp.56 110 30 34 ];
+        %tmp.56 = getm $.Toybox.Math;
+        symbol [ cos %tmp.57 110 35 38 ];
+        %tmp.57 = getv function %tmp.56 :cos;
+        %tmp.58 = lgetv %h.1;
+        symbol [ h %tmp.58 110 39 40 ];
+        %tmp.59 = invoke %tmp.56 %tmp.57(%tmp.58);
+        %tmp.60 = mul %tmp.55 %tmp.59;
+        %tmp.61 = add %tmp.54 %tmp.60;
+        symbol [ toNumber %tmp.62 110 43 51 ];
+        %tmp.62 = getv function %tmp.61 :toNumber;
+        %tmp.63 = invoke %tmp.61 %tmp.62();
+        lputv %p1x.9 %tmp.63;
+        symbol [ p1x %p1x.9 110 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 111 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %p1y.10 = local;
+        symbol [ p1y %p1y.10 111 12 15 ];
+        %tmp.64 = lgetv %bcy.7;
+        symbol [ bcy %tmp.64 111 19 22 ];
+        %tmp.65 = lgetv %hw.8;
+        symbol [ hw %tmp.65 111 25 27 ];
+        symbol [ Math %tmp.66 111 30 34 ];
+        %tmp.66 = getm $.Toybox.Math;
+        symbol [ sin %tmp.67 111 35 38 ];
+        %tmp.67 = getv function %tmp.66 :sin;
+        %tmp.68 = lgetv %h.1;
+        symbol [ h %tmp.68 111 39 40 ];
+        %tmp.69 = invoke %tmp.66 %tmp.67(%tmp.68);
+        %tmp.70 = mul %tmp.65 %tmp.69;
+        %tmp.71 = add %tmp.64 %tmp.70;
+        symbol [ toNumber %tmp.72 111 43 51 ];
+        %tmp.72 = getv function %tmp.71 :toNumber;
+        %tmp.73 = invoke %tmp.71 %tmp.72();
+        lputv %p1y.10 %tmp.73;
+        symbol [ p1y %p1y.10 111 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 112 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %p2x.11 = local;
+        symbol [ p2x %p2x.11 112 12 15 ];
+        %tmp.74 = lgetv %bcx.6;
+        symbol [ bcx %tmp.74 112 19 22 ];
+        %tmp.75 = lgetv %hw.8;
+        symbol [ hw %tmp.75 112 25 27 ];
+        symbol [ Math %tmp.76 112 30 34 ];
+        %tmp.76 = getm $.Toybox.Math;
+        symbol [ cos %tmp.77 112 35 38 ];
+        %tmp.77 = getv function %tmp.76 :cos;
+        %tmp.78 = lgetv %h.1;
+        symbol [ h %tmp.78 112 39 40 ];
+        %tmp.79 = invoke %tmp.76 %tmp.77(%tmp.78);
+        %tmp.80 = mul %tmp.75 %tmp.79;
+        %tmp.81 = sub %tmp.74 %tmp.80;
+        symbol [ toNumber %tmp.82 112 43 51 ];
+        %tmp.82 = getv function %tmp.81 :toNumber;
+        %tmp.83 = invoke %tmp.81 %tmp.82();
+        lputv %p2x.11 %tmp.83;
+        symbol [ p2x %p2x.11 112 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 113 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop" ]
+        %p2y.12 = local;
+        symbol [ p2y %p2y.12 113 12 15 ];
+        %tmp.84 = lgetv %bcy.7;
+        symbol [ bcy %tmp.84 113 19 22 ];
+        %tmp.85 = lgetv %hw.8;
+        symbol [ hw %tmp.85 113 25 27 ];
+        symbol [ Math %tmp.86 113 30 34 ];
+        %tmp.86 = getm $.Toybox.Math;
+        symbol [ sin %tmp.87 113 35 38 ];
+        %tmp.87 = getv function %tmp.86 :sin;
+        %tmp.88 = lgetv %h.1;
+        symbol [ h %tmp.88 113 39 40 ];
+        %tmp.89 = invoke %tmp.86 %tmp.87(%tmp.88);
+        %tmp.90 = mul %tmp.85 %tmp.89;
+        %tmp.91 = sub %tmp.84 %tmp.90;
+        symbol [ toNumber %tmp.92 113 43 51 ];
+        %tmp.92 = getv function %tmp.91 :toNumber;
+        %tmp.93 = invoke %tmp.91 %tmp.92();
+        lputv %p2y.12 %tmp.93;
+        symbol [ p2y %p2y.12 113 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 115 8 ]
+        %tmp.94 = lgetv %dc;
+        symbol [ dc %tmp.94 115 8 10 ];
+        symbol [ setColor %tmp.95 115 11 19 ];
+        %tmp.95 = getv function %tmp.94 :setColor;
+        symbol [ Graphics %tmp.96 115 20 28 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.97 115 29 38 ];
+        %tmp.97 = getv %tmp.96 :COLOR_RED;
+        symbol [ Graphics %tmp.98 115 40 48 ];
+        %tmp.98 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.99 115 49 66 ];
+        %tmp.99 = getv %tmp.98 :COLOR_TRANSPARENT;
+        invoke %tmp.94 %tmp.95(%tmp.97, %tmp.99);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 116 8 ]
+        %tmp.100 = lgetv %dc;
+        symbol [ dc %tmp.100 116 8 10 ];
+        symbol [ fillPolygon %tmp.101 116 11 22 ];
+        %tmp.101 = getv function %tmp.100 :fillPolygon;
+        %tmp.102 = newa 3;
+        %tmp.103 = newa 2;
+        %tmp.104 = lgetv %tipX.4;
+        symbol [ tipX %tmp.104 116 25 29 ];
+        %tmp.105 = dup %tmp.103;
+        %tmp.106 = aputv %tmp.105 0 %tmp.104;
+        %tmp.107 = lgetv %tipY.5;
+        symbol [ tipY %tmp.107 116 31 35 ];
+        %tmp.108 = dup %tmp.106;
+        %tmp.109 = aputv %tmp.108 1 %tmp.107;
+        %tmp.110 = dup %tmp.102;
+        %tmp.111 = aputv %tmp.110 0 %tmp.109;
+        %tmp.112 = newa 2;
+        %tmp.113 = lgetv %p1x.9;
+        symbol [ p1x %tmp.113 116 39 42 ];
+        %tmp.114 = dup %tmp.112;
+        %tmp.115 = aputv %tmp.114 0 %tmp.113;
+        %tmp.116 = lgetv %p1y.10;
+        symbol [ p1y %tmp.116 116 44 47 ];
+        %tmp.117 = dup %tmp.115;
+        %tmp.118 = aputv %tmp.117 1 %tmp.116;
+        %tmp.119 = dup %tmp.111;
+        %tmp.120 = aputv %tmp.119 1 %tmp.118;
+        %tmp.121 = newa 2;
+        %tmp.122 = lgetv %p2x.11;
+        symbol [ p2x %tmp.122 116 51 54 ];
+        %tmp.123 = dup %tmp.121;
+        %tmp.124 = aputv %tmp.123 0 %tmp.122;
+        %tmp.125 = lgetv %p2y.12;
+        symbol [ p2y %tmp.125 116 56 59 ];
+        %tmp.126 = dup %tmp.124;
+        %tmp.127 = aputv %tmp.126 1 %tmp.125;
+        %tmp.128 = dup %tmp.120;
+        %tmp.129 = aputv %tmp.128 2 %tmp.127;
+        invoke %tmp.100 %tmp.101(%tmp.129);
+_Users_oskar_BoatNav_source_BoatNavView_mc_99_97_117_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 119; @symbol_functiondef = [drawHeadingText,119,21,36]; @symbol_param<0> = [dc,119,37,39]; @symbol_param<0>_type<0> = [Dc,119,43,45]; @symbol_param<1> = [cx,119,47,49]; @symbol_param<1>_type<0> = [Number,119,53,59]; @symbol_param<2> = [cy,119,61,63]; @symbol_param<2>_type<0> = [Number,119,67,73]; ]
+    private
+    function drawHeadingText(dc as Dc, cx as Number, cy as Number) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_119_83_130_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 120 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_119_83_130_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_119_83_130_4_stop" ]
+        %deg.1 = local;
+        symbol [ deg %deg.1 120 12 15 ];
+        symbol [ _headingRad %tmp.2 120 18 29 ];
+        %tmp.2 = getv ? :_headingRad;
+        %tmp.3 = 180.0f;
+        %tmp.4 = mul %tmp.2 %tmp.3;
+        symbol [ Math %tmp.5 120 41 45 ];
+        %tmp.5 = getm $.Toybox.Math;
+        symbol [ PI %tmp.6 120 46 48 ];
+        %tmp.6 = getv %tmp.5 :PI;
+        %tmp.7 = div %tmp.4 %tmp.6;
+        lputv %deg.1 %tmp.7;
+        symbol [ deg %deg.1 120 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 121 8 ]
+_Users_oskar_BoatNav_source_BoatNavView_mc_121_8_121_41_if_stmt:
+        %tmp.8 = lgetv %deg.1;
+        symbol [ deg %tmp.8 121 12 15 ];
+        %tmp.9 = 0.0f;
+        %tmp.10 = lt %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_oskar_BoatNav_source_BoatNavView_mc_121_8_121_41_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_121_8_121_41_if_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_121_24_121_41_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 121 26 ]
+        %tmp.11 = lgetv %deg.1;
+        symbol [ deg %tmp.11 121 26 29 ];
+        %tmp.12 = 360.0f;
+        %tmp.13 = add %tmp.11 %tmp.12;
+        lputv %deg.1 %tmp.13;
+        symbol [ deg %deg.1 121 26 29 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_121_24_121_41_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_121_8_121_41_if_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_121_8_121_41_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 123 8 ]
+        %tmp.14 = lgetv %dc;
+        symbol [ dc %tmp.14 123 8 10 ];
+        symbol [ setColor %tmp.15 123 11 19 ];
+        %tmp.15 = getv function %tmp.14 :setColor;
+        %tmp.16 = 0xFF8888;
+        symbol [ Graphics %tmp.17 123 30 38 ];
+        %tmp.17 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.18 123 39 56 ];
+        %tmp.18 = getv %tmp.17 :COLOR_TRANSPARENT;
+        invoke %tmp.14 %tmp.15(%tmp.16, %tmp.18);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 124 8 ]
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 124 8 10 ];
+        symbol [ drawText %tmp.20 124 11 19 ];
+        %tmp.20 = getv function %tmp.19 :drawText;
+        %tmp.21 = lgetv %cx;
+        symbol [ cx %tmp.21 124 20 22 ];
+        %tmp.22 = lgetv %cy;
+        symbol [ cy %tmp.22 124 24 26 ];
+        %tmp.23 = 82;
+        %tmp.24 = sub %tmp.22 %tmp.23;
+        symbol [ Graphics %tmp.25 124 33 41 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.26 124 42 52 ];
+        %tmp.26 = getv %tmp.25 :FONT_XTINY;
+        %tmp.27 = "KURS";
+        symbol [ Graphics %tmp.28 125 19 27 ];
+        %tmp.28 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.29 125 28 47 ];
+        %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.30 125 50 58 ];
+        %tmp.30 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.31 125 59 79 ];
+        %tmp.31 = getv %tmp.30 :TEXT_JUSTIFY_VCENTER;
+        %tmp.32 = bitor %tmp.29 %tmp.31;
+        invoke %tmp.19 %tmp.20(%tmp.21, %tmp.24, %tmp.26, %tmp.27, %tmp.32);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 126 8 ]
+        %tmp.33 = lgetv %dc;
+        symbol [ dc %tmp.33 126 8 10 ];
+        symbol [ setColor %tmp.34 126 11 19 ];
+        %tmp.34 = getv function %tmp.33 :setColor;
+        symbol [ Graphics %tmp.35 126 20 28 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.36 126 29 40 ];
+        %tmp.36 = getv %tmp.35 :COLOR_WHITE;
+        symbol [ Graphics %tmp.37 126 42 50 ];
+        %tmp.37 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.38 126 51 68 ];
+        %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+        invoke %tmp.33 %tmp.34(%tmp.36, %tmp.38);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 127 8 ]
+        %tmp.39 = lgetv %dc;
+        symbol [ dc %tmp.39 127 8 10 ];
+        symbol [ drawText %tmp.40 127 11 19 ];
+        %tmp.40 = getv function %tmp.39 :drawText;
+        %tmp.41 = lgetv %cx;
+        symbol [ cx %tmp.41 127 20 22 ];
+        %tmp.42 = lgetv %cy;
+        symbol [ cy %tmp.42 127 24 26 ];
+        %tmp.43 = 65;
+        %tmp.44 = sub %tmp.42 %tmp.43;
+        symbol [ Graphics %tmp.45 127 33 41 ];
+        %tmp.45 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.46 127 42 52 ];
+        %tmp.46 = getv %tmp.45 :FONT_SMALL;
+        symbol [ Lang %tmp.47 128 19 23 ];
+        %tmp.47 = getm $.Toybox.Lang;
+        symbol [ format %tmp.48 128 24 30 ];
+        %tmp.48 = getv function %tmp.47 :format;
+        %tmp.49 = "$1$  $2$°";
+        %tmp.50 = newa 2;
+        %tmp.51 = self;
+        symbol [ headingToCardinal %tmp.52 128 45 62 ];
+        %tmp.52 = getv function %tmp.51 :headingToCardinal;
+        %tmp.53 = lgetv %deg.1;
+        symbol [ deg %tmp.53 128 63 66 ];
+        %tmp.54 = invoke %tmp.51 %tmp.52(%tmp.53);
+        %tmp.55 = dup %tmp.50;
+        %tmp.56 = aputv %tmp.55 0 %tmp.54;
+        %tmp.57 = lgetv %deg.1;
+        symbol [ deg %tmp.57 128 69 72 ];
+        symbol [ toNumber %tmp.58 128 73 81 ];
+        %tmp.58 = getv function %tmp.57 :toNumber;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        symbol [ format %tmp.60 128 84 90 ];
+        %tmp.60 = getv function %tmp.59 :format;
+        %tmp.61 = "%03d";
+        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
+        %tmp.63 = dup %tmp.56;
+        %tmp.64 = aputv %tmp.63 1 %tmp.62;
+        %tmp.65 = invoke %tmp.47 %tmp.48(%tmp.49, %tmp.64);
+        symbol [ Graphics %tmp.66 129 19 27 ];
+        %tmp.66 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.67 129 28 47 ];
+        %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.68 129 50 58 ];
+        %tmp.68 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.69 129 59 79 ];
+        %tmp.69 = getv %tmp.68 :TEXT_JUSTIFY_VCENTER;
+        %tmp.70 = bitor %tmp.67 %tmp.69;
+        invoke %tmp.39 %tmp.40(%tmp.41, %tmp.44, %tmp.46, %tmp.65, %tmp.70);
+_Users_oskar_BoatNav_source_BoatNavView_mc_119_83_130_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 132; @symbol_functiondef = [drawSpeed,132,21,30]; @symbol_param<0> = [dc,132,31,33]; @symbol_param<0>_type<0> = [Dc,132,37,39]; @symbol_param<1> = [cx,132,41,43]; @symbol_param<1>_type<0> = [Number,132,47,53]; @symbol_param<2> = [cy,132,55,57]; @symbol_param<2>_type<0> = [Number,132,61,67]; ]
+    private
+    function drawSpeed(dc as Dc, cx as Number, cy as Number) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_132_77_139_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 133 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 133 8 10 ];
+        symbol [ setColor %tmp.2 133 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        symbol [ Graphics %tmp.3 133 20 28 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.4 133 29 40 ];
+        %tmp.4 = getv %tmp.3 :COLOR_WHITE;
+        symbol [ Graphics %tmp.5 133 42 50 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.6 133 51 68 ];
+        %tmp.6 = getv %tmp.5 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 134 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 134 8 10 ];
+        symbol [ drawText %tmp.8 134 11 19 ];
+        %tmp.8 = getv function %tmp.7 :drawText;
+        %tmp.9 = lgetv %cx;
+        symbol [ cx %tmp.9 134 20 22 ];
+        %tmp.10 = lgetv %cy;
+        symbol [ cy %tmp.10 134 24 26 ];
+        symbol [ Graphics %tmp.11 134 28 36 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.12 134 37 52 ];
+        %tmp.12 = getv %tmp.11 :FONT_NUMBER_HOT;
+        symbol [ _speedKnots %tmp.14 134 54 65 ];
+        %tmp.14 = getv ? :_speedKnots;
+        symbol [ format %tmp.15 134 66 72 ];
+        %tmp.15 = getv function %tmp.14 :format;
+        %tmp.16 = "%.1f";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        symbol [ Graphics %tmp.18 135 19 27 ];
+        %tmp.18 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.19 135 28 47 ];
+        %tmp.19 = getv %tmp.18 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.20 135 50 58 ];
+        %tmp.20 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.21 135 59 79 ];
+        %tmp.21 = getv %tmp.20 :TEXT_JUSTIFY_VCENTER;
+        %tmp.22 = bitor %tmp.19 %tmp.21;
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.12, %tmp.17, %tmp.22);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 136 8 ]
+        %tmp.23 = lgetv %dc;
+        symbol [ dc %tmp.23 136 8 10 ];
+        symbol [ setColor %tmp.24 136 11 19 ];
+        %tmp.24 = getv function %tmp.23 :setColor;
+        symbol [ Graphics %tmp.25 136 20 28 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.26 136 29 38 ];
+        %tmp.26 = getv %tmp.25 :COLOR_RED;
+        symbol [ Graphics %tmp.27 136 40 48 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.28 136 49 66 ];
+        %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+        invoke %tmp.23 %tmp.24(%tmp.26, %tmp.28);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 137 8 ]
+        %tmp.29 = lgetv %dc;
+        symbol [ dc %tmp.29 137 8 10 ];
+        symbol [ drawText %tmp.30 137 11 19 ];
+        %tmp.30 = getv function %tmp.29 :drawText;
+        %tmp.31 = lgetv %cx;
+        symbol [ cx %tmp.31 137 20 22 ];
+        %tmp.32 = lgetv %cy;
+        symbol [ cy %tmp.32 137 24 26 ];
+        %tmp.33 = 50;
+        %tmp.34 = add %tmp.32 %tmp.33;
+        symbol [ Graphics %tmp.35 137 33 41 ];
+        %tmp.35 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.36 137 42 52 ];
+        %tmp.36 = getv %tmp.35 :FONT_XTINY;
+        %tmp.37 = "KNOP";
+        symbol [ Graphics %tmp.38 138 19 27 ];
+        %tmp.38 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.39 138 28 47 ];
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.40 138 50 58 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.41 138 59 79 ];
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_VCENTER;
+        %tmp.42 = bitor %tmp.39 %tmp.41;
+        invoke %tmp.29 %tmp.30(%tmp.31, %tmp.34, %tmp.36, %tmp.37, %tmp.42);
+_Users_oskar_BoatNav_source_BoatNavView_mc_132_77_139_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 141; @symbol_functiondef = [drawBottomData,141,21,35]; @symbol_param<0> = [dc,141,36,38]; @symbol_param<0>_type<0> = [Dc,141,42,44]; @symbol_param<1> = [cx,141,46,48]; @symbol_param<1>_type<0> = [Number,141,52,58]; @symbol_param<2> = [cy,141,60,62]; @symbol_param<2>_type<0> = [Number,141,66,72]; ]
+    private
+    function drawBottomData(dc as Dc, cx as Number, cy as Number) as Void {
+_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 142 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_stop" ]
+        %nmX.1 = local;
+        symbol [ nmX %nmX.1 142 12 15 ];
+        %tmp.1 = lgetv %cx;
+        symbol [ cx %tmp.1 142 18 20 ];
+        %tmp.2 = 60;
+        %tmp.3 = sub %tmp.1 %tmp.2;
+        lputv %nmX.1 %tmp.3;
+        symbol [ nmX %nmX.1 142 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 143 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_stop" ]
+        %coordX.2 = local;
+        symbol [ coordX %coordX.2 143 12 18 ];
+        %tmp.4 = lgetv %cx;
+        symbol [ cx %tmp.4 143 21 23 ];
+        %tmp.5 = 50;
+        %tmp.6 = add %tmp.4 %tmp.5;
+        lputv %coordX.2 %tmp.6;
+        symbol [ coordX %coordX.2 143 12 18 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 144 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_stop" ]
+        %y1.3 = local;
+        symbol [ y1 %y1.3 144 12 14 ];
+        %tmp.7 = lgetv %cy;
+        symbol [ cy %tmp.7 144 17 19 ];
+        %tmp.8 = 72;
+        %tmp.9 = add %tmp.7 %tmp.8;
+        lputv %y1.3 %tmp.9;
+        symbol [ y1 %y1.3 144 12 14 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 145 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_stop" ]
+        %y2.4 = local;
+        symbol [ y2 %y2.4 145 12 14 ];
+        %tmp.10 = lgetv %cy;
+        symbol [ cy %tmp.10 145 17 19 ];
+        %tmp.11 = 90;
+        %tmp.12 = add %tmp.10 %tmp.11;
+        lputv %y2.4 %tmp.12;
+        symbol [ y2 %y2.4 145 12 14 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 147 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 147 8 10 ];
+        symbol [ setColor %tmp.14 147 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = 0xFF8888;
+        symbol [ Graphics %tmp.16 147 30 38 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.17 147 39 56 ];
+        %tmp.17 = getv %tmp.16 :COLOR_TRANSPARENT;
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.17);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 148 8 ]
+        %tmp.18 = lgetv %dc;
+        symbol [ dc %tmp.18 148 8 10 ];
+        symbol [ drawText %tmp.19 148 11 19 ];
+        %tmp.19 = getv function %tmp.18 :drawText;
+        %tmp.20 = lgetv %nmX.1;
+        symbol [ nmX %tmp.20 148 20 23 ];
+        %tmp.21 = lgetv %y1.3;
+        symbol [ y1 %tmp.21 148 25 27 ];
+        symbol [ Graphics %tmp.22 148 29 37 ];
+        %tmp.22 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.23 148 38 48 ];
+        %tmp.23 = getv %tmp.22 :FONT_XTINY;
+        %tmp.24 = "NM";
+        symbol [ Graphics %tmp.25 149 19 27 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.26 149 28 47 ];
+        %tmp.26 = getv %tmp.25 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.27 149 50 58 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.28 149 59 79 ];
+        %tmp.28 = getv %tmp.27 :TEXT_JUSTIFY_VCENTER;
+        %tmp.29 = bitor %tmp.26 %tmp.28;
+        invoke %tmp.18 %tmp.19(%tmp.20, %tmp.21, %tmp.23, %tmp.24, %tmp.29);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 150 8 ]
+        %tmp.30 = lgetv %dc;
+        symbol [ dc %tmp.30 150 8 10 ];
+        symbol [ setColor %tmp.31 150 11 19 ];
+        %tmp.31 = getv function %tmp.30 :setColor;
+        symbol [ Graphics %tmp.32 150 20 28 ];
+        %tmp.32 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.33 150 29 40 ];
+        %tmp.33 = getv %tmp.32 :COLOR_WHITE;
+        symbol [ Graphics %tmp.34 150 42 50 ];
+        %tmp.34 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.35 150 51 68 ];
+        %tmp.35 = getv %tmp.34 :COLOR_TRANSPARENT;
+        invoke %tmp.30 %tmp.31(%tmp.33, %tmp.35);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 151 8 ]
+        %tmp.36 = lgetv %dc;
+        symbol [ dc %tmp.36 151 8 10 ];
+        symbol [ drawText %tmp.37 151 11 19 ];
+        %tmp.37 = getv function %tmp.36 :drawText;
+        %tmp.38 = lgetv %nmX.1;
+        symbol [ nmX %tmp.38 151 20 23 ];
+        %tmp.39 = lgetv %y2.4;
+        symbol [ y2 %tmp.39 151 25 27 ];
+        symbol [ Graphics %tmp.40 151 29 37 ];
+        %tmp.40 = getm $.Toybox.Graphics;
+        symbol [ FONT_SMALL %tmp.41 151 38 48 ];
+        %tmp.41 = getv %tmp.40 :FONT_SMALL;
+        symbol [ _distanceNm %tmp.43 151 50 61 ];
+        %tmp.43 = getv ? :_distanceNm;
+        symbol [ format %tmp.44 151 62 68 ];
+        %tmp.44 = getv function %tmp.43 :format;
+        %tmp.45 = "%.2f";
+        %tmp.46 = invoke %tmp.43 %tmp.44(%tmp.45);
+        symbol [ Graphics %tmp.47 152 19 27 ];
+        %tmp.47 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.48 152 28 47 ];
+        %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.49 152 50 58 ];
+        %tmp.49 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.50 152 59 79 ];
+        %tmp.50 = getv %tmp.49 :TEXT_JUSTIFY_VCENTER;
+        %tmp.51 = bitor %tmp.48 %tmp.50;
+        invoke %tmp.36 %tmp.37(%tmp.38, %tmp.39, %tmp.41, %tmp.46, %tmp.51);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 154 8 ]
+        %tmp.52 = lgetv %dc;
+        symbol [ dc %tmp.52 154 8 10 ];
+        symbol [ setColor %tmp.53 154 11 19 ];
+        %tmp.53 = getv function %tmp.52 :setColor;
+        %tmp.54 = 0xFF8888;
+        symbol [ Graphics %tmp.55 154 30 38 ];
+        %tmp.55 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.56 154 39 56 ];
+        %tmp.56 = getv %tmp.55 :COLOR_TRANSPARENT;
+        invoke %tmp.52 %tmp.53(%tmp.54, %tmp.56);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 155 8 ]
+        %tmp.57 = lgetv %dc;
+        symbol [ dc %tmp.57 155 8 10 ];
+        symbol [ drawText %tmp.58 155 11 19 ];
+        %tmp.58 = getv function %tmp.57 :drawText;
+        %tmp.59 = lgetv %coordX.2;
+        symbol [ coordX %tmp.59 155 20 26 ];
+        %tmp.60 = lgetv %y1.3;
+        symbol [ y1 %tmp.60 155 28 30 ];
+        symbol [ Graphics %tmp.61 155 32 40 ];
+        %tmp.61 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.62 155 41 51 ];
+        %tmp.62 = getv %tmp.61 :FONT_XTINY;
+        %tmp.63 = self;
+        symbol [ formatCoord %tmp.64 155 53 64 ];
+        %tmp.64 = getv function %tmp.63 :formatCoord;
+        symbol [ _lat %tmp.66 155 65 69 ];
+        %tmp.66 = getv ? :_lat;
+        %tmp.67 = true;
+        %tmp.68 = invoke %tmp.63 %tmp.64(%tmp.66, %tmp.67);
+        symbol [ Graphics %tmp.69 156 19 27 ];
+        %tmp.69 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.70 156 28 47 ];
+        %tmp.70 = getv %tmp.69 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.71 156 50 58 ];
+        %tmp.71 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.72 156 59 79 ];
+        %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_VCENTER;
+        %tmp.73 = bitor %tmp.70 %tmp.72;
+        invoke %tmp.57 %tmp.58(%tmp.59, %tmp.60, %tmp.62, %tmp.68, %tmp.73);
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 157 8 ]
+        %tmp.74 = lgetv %dc;
+        symbol [ dc %tmp.74 157 8 10 ];
+        symbol [ drawText %tmp.75 157 11 19 ];
+        %tmp.75 = getv function %tmp.74 :drawText;
+        %tmp.76 = lgetv %coordX.2;
+        symbol [ coordX %tmp.76 157 20 26 ];
+        %tmp.77 = lgetv %y2.4;
+        symbol [ y2 %tmp.77 157 28 30 ];
+        symbol [ Graphics %tmp.78 157 32 40 ];
+        %tmp.78 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.79 157 41 51 ];
+        %tmp.79 = getv %tmp.78 :FONT_XTINY;
+        %tmp.80 = self;
+        symbol [ formatCoord %tmp.81 157 53 64 ];
+        %tmp.81 = getv function %tmp.80 :formatCoord;
+        symbol [ _lon %tmp.83 157 65 69 ];
+        %tmp.83 = getv ? :_lon;
+        %tmp.84 = false;
+        %tmp.85 = invoke %tmp.80 %tmp.81(%tmp.83, %tmp.84);
+        symbol [ Graphics %tmp.86 158 19 27 ];
+        %tmp.86 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.87 158 28 47 ];
+        %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.88 158 50 58 ];
+        %tmp.88 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.89 158 59 79 ];
+        %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
+        %tmp.90 = bitor %tmp.87 %tmp.89;
+        invoke %tmp.74 %tmp.75(%tmp.76, %tmp.77, %tmp.79, %tmp.85, %tmp.90);
+_Users_oskar_BoatNav_source_BoatNavView_mc_141_82_159_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 161; @symbol_functiondef = [headingToCardinal,161,21,38]; @symbol_param<0> = [deg,161,39,42]; @symbol_param<0>_type<0> = [Float,161,46,51]; @symbol_return<0> = [String,161,56,62]; ]
+    private
+    function headingToCardinal(deg as Float) as String {
+_Users_oskar_BoatNav_source_BoatNavView_mc_161_63_165_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 162 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_161_63_165_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_161_63_165_4_stop" ]
+        %labels.1 = local;
+        symbol [ labels %labels.1 162 12 18 ];
+        %tmp.1 = newa 16;
+        %tmp.2 = "N";
+        %tmp.3 = dup %tmp.1;
+        %tmp.4 = aputv %tmp.3 0 %tmp.2;
+        %tmp.5 = "NNE";
+        %tmp.6 = dup %tmp.4;
+        %tmp.7 = aputv %tmp.6 1 %tmp.5;
+        %tmp.8 = "NE";
+        %tmp.9 = dup %tmp.7;
+        %tmp.10 = aputv %tmp.9 2 %tmp.8;
+        %tmp.11 = "ENE";
+        %tmp.12 = dup %tmp.10;
+        %tmp.13 = aputv %tmp.12 3 %tmp.11;
+        %tmp.14 = "E";
+        %tmp.15 = dup %tmp.13;
+        %tmp.16 = aputv %tmp.15 4 %tmp.14;
+        %tmp.17 = "ESE";
+        %tmp.18 = dup %tmp.16;
+        %tmp.19 = aputv %tmp.18 5 %tmp.17;
+        %tmp.20 = "SE";
+        %tmp.21 = dup %tmp.19;
+        %tmp.22 = aputv %tmp.21 6 %tmp.20;
+        %tmp.23 = "SSE";
+        %tmp.24 = dup %tmp.22;
+        %tmp.25 = aputv %tmp.24 7 %tmp.23;
+        %tmp.26 = "S";
+        %tmp.27 = dup %tmp.25;
+        %tmp.28 = aputv %tmp.27 8 %tmp.26;
+        %tmp.29 = "SSW";
+        %tmp.30 = dup %tmp.28;
+        %tmp.31 = aputv %tmp.30 9 %tmp.29;
+        %tmp.32 = "SW";
+        %tmp.33 = dup %tmp.31;
+        %tmp.34 = aputv %tmp.33 10 %tmp.32;
+        %tmp.35 = "WSW";
+        %tmp.36 = dup %tmp.34;
+        %tmp.37 = aputv %tmp.36 11 %tmp.35;
+        %tmp.38 = "W";
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 12 %tmp.38;
+        %tmp.41 = "WNW";
+        %tmp.42 = dup %tmp.40;
+        %tmp.43 = aputv %tmp.42 13 %tmp.41;
+        %tmp.44 = "NW";
+        %tmp.45 = dup %tmp.43;
+        %tmp.46 = aputv %tmp.45 14 %tmp.44;
+        %tmp.47 = "NNW";
+        %tmp.48 = dup %tmp.46;
+        %tmp.49 = aputv %tmp.48 15 %tmp.47;
+        lputv %labels.1 %tmp.49;
+        symbol [ labels %labels.1 162 12 18 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 164 8 ]
+        %tmp.50 = lgetv %labels.1;
+        symbol [ labels %tmp.50 164 15 21 ];
+        %tmp.51 = lgetv %deg;
+        symbol [ deg %tmp.51 164 24 27 ];
+        %tmp.52 = 11.25f;
+        %tmp.53 = add %tmp.51 %tmp.52;
+        %tmp.54 = 22.5f;
+        %tmp.55 = div %tmp.53 %tmp.54;
+        symbol [ toNumber %tmp.56 164 47 55 ];
+        %tmp.56 = getv function %tmp.55 :toNumber;
+        %tmp.57 = invoke %tmp.55 %tmp.56();
+        %tmp.58 = 16;
+        %tmp.59 = mod %tmp.57 %tmp.58;
+        %tmp.60 = agetv %tmp.50 %tmp.59;
+        ret %tmp.60;
+_Users_oskar_BoatNav_source_BoatNavView_mc_161_63_165_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 167; @symbol_functiondef = [formatCoord,167,21,32]; @symbol_param<0> = [deg,167,33,36]; @symbol_param<0>_type<0> = [Float,167,40,45]; @symbol_param<1> = [isLat,167,47,52]; @symbol_param<1>_type<0> = [Boolean,167,56,63]; @symbol_return<0> = [String,167,68,74]; ]
+    private
+    function formatCoord(deg as Float, isLat as Boolean) as String {
+_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 168 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_stop" ]
+        %dir.1 = local;
+        symbol [ dir %dir.1 168 12 15 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_begin:
+        %tmp.1 = lgetv %isLat;
+        symbol [ isLat %tmp.1 168 18 23 ];
+        bf %tmp.1 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_true:
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_begin:
+        %tmp.2 = lgetv %deg;
+        symbol [ deg %tmp.2 168 27 30 ];
+        %tmp.3 = 0.0f;
+        %tmp.4 = gte %tmp.2 %tmp.3;
+        bf %tmp.4 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_true:
+        %tmp.5 = "N";
+        push %tmp.5;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_else_false:
+        %tmp.6 = "S";
+        push %tmp.6;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_end:
+        %tmp.7 = phi [%tmp.4 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_begin] [%tmp.5 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_true] [%tmp.6 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_else_false] [%tmp.7 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_27_168_47_end];
+        push %tmp.7;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_else_false:
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_begin:
+        %tmp.8 = lgetv %deg;
+        symbol [ deg %tmp.8 168 55 58 ];
+        %tmp.9 = 0.0f;
+        %tmp.10 = gte %tmp.8 %tmp.9;
+        bf %tmp.10 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_true:
+        %tmp.11 = "E";
+        push %tmp.11;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_else_false:
+        %tmp.12 = "W";
+        push %tmp.12;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_end:
+        %tmp.13 = phi [%tmp.10 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_begin] [%tmp.11 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_true] [%tmp.12 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_else_false] [%tmp.13 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_55_168_75_end];
+        push %tmp.13;
+_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_end:
+        %tmp.14 = phi [%tmp.1 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_begin] [%tmp.7 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_true] [%tmp.13 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_else_false] [%tmp.14 @_Users_oskar_BoatNav_source_BoatNavView_mc_168_18_168_78_end];
+        lputv %dir.1 %tmp.14;
+        symbol [ dir %dir.1 168 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 169 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_stop" ]
+        %abs.2 = local;
+        symbol [ abs %abs.2 169 12 15 ];
+_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_begin:
+        %tmp.15 = lgetv %deg;
+        symbol [ deg %tmp.15 169 18 21 ];
+        %tmp.16 = 0.0f;
+        %tmp.17 = lt %tmp.15 %tmp.16;
+        bf %tmp.17 @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_else_false;
+_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_true:
+        %tmp.18 = lgetv %deg;
+        symbol [ deg %tmp.18 169 32 35 ];
+        %tmp.19 = sub 0 %tmp.18;
+        push %tmp.19;
+        goto @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_end;
+_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_else_false:
+        %tmp.20 = lgetv %deg;
+        symbol [ deg %tmp.20 169 38 41 ];
+        push %tmp.20;
+_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_end:
+        %tmp.21 = phi [%tmp.17 @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_begin] [%tmp.19 @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_true] [%tmp.20 @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_else_false] [%tmp.21 @_Users_oskar_BoatNav_source_BoatNavView_mc_169_18_169_38_end];
+        lputv %abs.2 %tmp.21;
+        symbol [ abs %abs.2 169 12 15 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 170 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_stop" ]
+        %d.3 = local;
+        symbol [ d %d.3 170 12 13 ];
+        %tmp.22 = lgetv %abs.2;
+        symbol [ abs %tmp.22 170 16 19 ];
+        symbol [ toNumber %tmp.23 170 20 28 ];
+        %tmp.23 = getv function %tmp.22 :toNumber;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        lputv %d.3 %tmp.24;
+        symbol [ d %d.3 170 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 171 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_stop" ]
+        %m.4 = local;
+        symbol [ m %m.4 171 12 13 ];
+        %tmp.25 = lgetv %abs.2;
+        symbol [ abs %tmp.25 171 18 21 ];
+        %tmp.26 = lgetv %d.3;
+        symbol [ d %tmp.26 171 24 25 ];
+        symbol [ toFloat %tmp.27 171 26 33 ];
+        %tmp.27 = getv function %tmp.26 :toFloat;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        %tmp.29 = sub %tmp.25 %tmp.28;
+        %tmp.30 = 60.0f;
+        %tmp.31 = mul %tmp.29 %tmp.30;
+        symbol [ toNumber %tmp.32 171 46 54 ];
+        %tmp.32 = getv function %tmp.31 :toNumber;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        lputv %m.4 %tmp.33;
+        symbol [ m %m.4 171 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 172 8 ]
+        symbol [ Lang %tmp.34 172 15 19 ];
+        %tmp.34 = getm $.Toybox.Lang;
+        symbol [ format %tmp.35 172 20 26 ];
+        %tmp.35 = getv function %tmp.34 :format;
+        %tmp.36 = "$1$°$2$'$3$";
+        %tmp.37 = newa 3;
+        %tmp.38 = lgetv %d.3;
+        symbol [ d %tmp.38 172 43 44 ];
+        %tmp.39 = dup %tmp.37;
+        %tmp.40 = aputv %tmp.39 0 %tmp.38;
+        %tmp.41 = lgetv %m.4;
+        symbol [ m %tmp.41 172 46 47 ];
+        symbol [ format %tmp.42 172 48 54 ];
+        %tmp.42 = getv function %tmp.41 :format;
+        %tmp.43 = "%02d";
+        %tmp.44 = invoke %tmp.41 %tmp.42(%tmp.43);
+        %tmp.45 = dup %tmp.40;
+        %tmp.46 = aputv %tmp.45 1 %tmp.44;
+        %tmp.47 = lgetv %dir.1;
+        symbol [ dir %tmp.47 172 64 67 ];
+        %tmp.48 = dup %tmp.46;
+        %tmp.49 = aputv %tmp.48 2 %tmp.47;
+        %tmp.50 = invoke %tmp.34 %tmp.35(%tmp.36, %tmp.49);
+        ret %tmp.50;
+_Users_oskar_BoatNav_source_BoatNavView_mc_167_75_173_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 175; @symbol_functiondef = [haversineNm,175,21,32]; @symbol_param<0> = [lat1,175,33,37]; @symbol_param<0>_type<0> = [Float,175,41,46]; @symbol_param<1> = [lon1,175,48,52]; @symbol_param<1>_type<0> = [Float,175,56,61]; @symbol_param<2> = [lat2,175,63,67]; @symbol_param<2>_type<0> = [Float,175,71,76]; @symbol_param<3> = [lon2,175,78,82]; @symbol_param<3>_type<0> = [Float,175,86,91]; @symbol_return<0> = [Float,175,96,101]; ]
+    private
+    function haversineNm(lat1 as Float, lon1 as Float, lat2 as Float, lon2 as Float) as Float {
+_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 176 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_stop" ]
+        %R.1 = local;
+        symbol [ R %R.1 176 12 13 ];
+        %tmp.1 = 3440.065f;
+        lputv %R.1 %tmp.1;
+        symbol [ R %R.1 176 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 177 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_stop" ]
+        %dLat.2 = local;
+        symbol [ dLat %dLat.2 177 12 16 ];
+        %tmp.2 = lgetv %lat2;
+        symbol [ lat2 %tmp.2 177 20 24 ];
+        %tmp.3 = lgetv %lat1;
+        symbol [ lat1 %tmp.3 177 27 31 ];
+        %tmp.4 = sub %tmp.2 %tmp.3;
+        symbol [ Math %tmp.5 177 35 39 ];
+        %tmp.5 = getm $.Toybox.Math;
+        symbol [ PI %tmp.6 177 40 42 ];
+        %tmp.6 = getv %tmp.5 :PI;
+        %tmp.7 = mul %tmp.4 %tmp.6;
+        %tmp.8 = 180.0f;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        lputv %dLat.2 %tmp.9;
+        symbol [ dLat %dLat.2 177 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 178 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_stop" ]
+        %dLon.3 = local;
+        symbol [ dLon %dLon.3 178 12 16 ];
+        %tmp.10 = lgetv %lon2;
+        symbol [ lon2 %tmp.10 178 20 24 ];
+        %tmp.11 = lgetv %lon1;
+        symbol [ lon1 %tmp.11 178 27 31 ];
+        %tmp.12 = sub %tmp.10 %tmp.11;
+        symbol [ Math %tmp.13 178 35 39 ];
+        %tmp.13 = getm $.Toybox.Math;
+        symbol [ PI %tmp.14 178 40 42 ];
+        %tmp.14 = getv %tmp.13 :PI;
+        %tmp.15 = mul %tmp.12 %tmp.14;
+        %tmp.16 = 180.0f;
+        %tmp.17 = div %tmp.15 %tmp.16;
+        lputv %dLon.3 %tmp.17;
+        symbol [ dLon %dLon.3 178 12 16 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 179 8 ]
+        [ "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_start" "_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_stop" ]
+        %a.4 = local;
+        symbol [ a %a.4 179 12 13 ];
+        symbol [ Math %tmp.18 179 16 20 ];
+        %tmp.18 = getm $.Toybox.Math;
+        symbol [ sin %tmp.19 179 21 24 ];
+        %tmp.19 = getv function %tmp.18 :sin;
+        %tmp.20 = lgetv %dLat.2;
+        symbol [ dLat %tmp.20 179 25 29 ];
+        %tmp.21 = 2.0f;
+        %tmp.22 = div %tmp.20 %tmp.21;
+        %tmp.23 = invoke %tmp.18 %tmp.19(%tmp.22);
+        symbol [ Math %tmp.24 179 40 44 ];
+        %tmp.24 = getm $.Toybox.Math;
+        symbol [ sin %tmp.25 179 45 48 ];
+        %tmp.25 = getv function %tmp.24 :sin;
+        %tmp.26 = lgetv %dLat.2;
+        symbol [ dLat %tmp.26 179 49 53 ];
+        %tmp.27 = 2.0f;
+        %tmp.28 = div %tmp.26 %tmp.27;
+        %tmp.29 = invoke %tmp.24 %tmp.25(%tmp.28);
+        %tmp.30 = mul %tmp.23 %tmp.29;
+        symbol [ Math %tmp.31 180 16 20 ];
+        %tmp.31 = getm $.Toybox.Math;
+        symbol [ cos %tmp.32 180 21 24 ];
+        %tmp.32 = getv function %tmp.31 :cos;
+        %tmp.33 = lgetv %lat1;
+        symbol [ lat1 %tmp.33 180 25 29 ];
+        symbol [ Math %tmp.34 180 32 36 ];
+        %tmp.34 = getm $.Toybox.Math;
+        symbol [ PI %tmp.35 180 37 39 ];
+        %tmp.35 = getv %tmp.34 :PI;
+        %tmp.36 = mul %tmp.33 %tmp.35;
+        %tmp.37 = 180.0f;
+        %tmp.38 = div %tmp.36 %tmp.37;
+        %tmp.39 = invoke %tmp.31 %tmp.32(%tmp.38);
+        symbol [ Math %tmp.40 180 52 56 ];
+        %tmp.40 = getm $.Toybox.Math;
+        symbol [ cos %tmp.41 180 57 60 ];
+        %tmp.41 = getv function %tmp.40 :cos;
+        %tmp.42 = lgetv %lat2;
+        symbol [ lat2 %tmp.42 180 61 65 ];
+        symbol [ Math %tmp.43 180 68 72 ];
+        %tmp.43 = getm $.Toybox.Math;
+        symbol [ PI %tmp.44 180 73 75 ];
+        %tmp.44 = getv %tmp.43 :PI;
+        %tmp.45 = mul %tmp.42 %tmp.44;
+        %tmp.46 = 180.0f;
+        %tmp.47 = div %tmp.45 %tmp.46;
+        %tmp.48 = invoke %tmp.40 %tmp.41(%tmp.47);
+        %tmp.49 = mul %tmp.39 %tmp.48;
+        symbol [ Math %tmp.50 181 16 20 ];
+        %tmp.50 = getm $.Toybox.Math;
+        symbol [ sin %tmp.51 181 21 24 ];
+        %tmp.51 = getv function %tmp.50 :sin;
+        %tmp.52 = lgetv %dLon.3;
+        symbol [ dLon %tmp.52 181 25 29 ];
+        %tmp.53 = 2.0f;
+        %tmp.54 = div %tmp.52 %tmp.53;
+        %tmp.55 = invoke %tmp.50 %tmp.51(%tmp.54);
+        %tmp.56 = mul %tmp.49 %tmp.55;
+        symbol [ Math %tmp.57 181 40 44 ];
+        %tmp.57 = getm $.Toybox.Math;
+        symbol [ sin %tmp.58 181 45 48 ];
+        %tmp.58 = getv function %tmp.57 :sin;
+        %tmp.59 = lgetv %dLon.3;
+        symbol [ dLon %tmp.59 181 49 53 ];
+        %tmp.60 = 2.0f;
+        %tmp.61 = div %tmp.59 %tmp.60;
+        %tmp.62 = invoke %tmp.57 %tmp.58(%tmp.61);
+        %tmp.63 = mul %tmp.56 %tmp.62;
+        %tmp.64 = add %tmp.30 %tmp.63;
+        lputv %a.4 %tmp.64;
+        symbol [ a %a.4 179 12 13 ];
+[ "/Users/oskar/BoatNav/source/BoatNavView.mc" 182 8 ]
+        %tmp.65 = lgetv %R.1;
+        symbol [ R %tmp.65 182 15 16 ];
+        %tmp.66 = 2.0f;
+        %tmp.67 = mul %tmp.65 %tmp.66;
+        symbol [ Math %tmp.68 182 26 30 ];
+        %tmp.68 = getm $.Toybox.Math;
+        symbol [ atan2 %tmp.69 182 31 36 ];
+        %tmp.69 = getv function %tmp.68 :atan2;
+        symbol [ Math %tmp.70 182 37 41 ];
+        %tmp.70 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.71 182 42 46 ];
+        %tmp.71 = getv function %tmp.70 :sqrt;
+        %tmp.72 = lgetv %a.4;
+        symbol [ a %tmp.72 182 47 48 ];
+        %tmp.73 = invoke %tmp.70 %tmp.71(%tmp.72);
+        symbol [ Math %tmp.74 182 51 55 ];
+        %tmp.74 = getm $.Toybox.Math;
+        symbol [ sqrt %tmp.75 182 56 60 ];
+        %tmp.75 = getv function %tmp.74 :sqrt;
+        %tmp.76 = 1.0f;
+        %tmp.77 = lgetv %a.4;
+        symbol [ a %tmp.77 182 68 69 ];
+        %tmp.78 = sub %tmp.76 %tmp.77;
+        %tmp.79 = invoke %tmp.74 %tmp.75(%tmp.78);
+        %tmp.80 = invoke %tmp.68 %tmp.69(%tmp.73, %tmp.79);
+        %tmp.81 = mul %tmp.67 %tmp.80;
+        ret %tmp.81;
+_Users_oskar_BoatNav_source_BoatNavView_mc_175_102_183_4_stop:
+    }
+}
+[ @file = "/Users/oskar/BoatNav/source/BoatNavView.mc"; @line = 1; ]
+<init> {
+}

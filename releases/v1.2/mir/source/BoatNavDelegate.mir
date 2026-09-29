@@ -1,0 +1,80 @@
+[ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [WatchUi,2,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 4; @symbol_classdef = [BoatNavDelegate,4,6,21]; @symbol_extends<0> = [WatchUi,4,30,37]; @symbol_extends<1> = [BehaviorDelegate,4,38,54]; ]
+class BoatNavDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 5; @position = 16; @symbol_vardef = [_view,5,16,21]; @symbol_type<0> = [BoatNavView,5,25,36]; ]
+    private
+    var _view as BoatNavView;
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; @symbol_param<0> = [view,7,24,28]; @symbol_param<0>_type<0> = [BoatNavView,7,32,43]; ]
+    function initialize(view as BoatNavView) as Void {
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_7_45_10_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 8 8 ]
+        symbol [ BehaviorDelegate %tmp.2 8 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 8 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 9 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 9 16 20 ];
+        symbol [ _view ? 9 8 13 ];
+        putv self :_view %tmp.4;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_7_45_10_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 12; @symbol_functiondef = [onSelect,12,13,21]; @symbol_return<0> = [Boolean,12,27,34]; ]
+    function onSelect() as Boolean {
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_12_35_15_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 13 8 ]
+        symbol [ _view %tmp.2 13 8 13 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ toggleTracking %tmp.3 13 14 28 ];
+        %tmp.3 = getv function %tmp.2 :toggleTracking;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 14 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_12_35_15_4_stop:
+    }
+    [ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 17; @symbol_functiondef = [onBack,17,13,19]; @symbol_return<0> = [Boolean,17,25,32]; ]
+    function onBack() as Boolean {
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_17_33_23_4_start:
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 18 8 ]
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_8_21_8_if_stmt:
+        symbol [ _view %tmp.2 18 12 17 ];
+        %tmp.2 = getv ? :_view;
+        symbol [ isTracking %tmp.3 18 18 28 ];
+        %tmp.3 = getv function %tmp.2 :isTracking;
+        %tmp.4 = invoke %tmp.2 %tmp.3();
+        bf %tmp.4 @_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_8_21_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_8_21_8_if_true:
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_32_21_8_start:
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 19 12 ]
+        symbol [ _view %tmp.6 19 12 17 ];
+        %tmp.6 = getv ? :_view;
+        symbol [ toggleTracking %tmp.7 19 18 32 ];
+        %tmp.7 = getv function %tmp.6 :toggleTracking;
+        invoke %tmp.6 %tmp.7();
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 20 12 ]
+        %tmp.8 = true;
+        ret %tmp.8;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_32_21_8_stop:
+        goto @_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_8_21_8_if_end;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_18_8_21_8_if_end:
+[ "/Users/oskar/BoatNav/source/BoatNavDelegate.mc" 22 8 ]
+        %tmp.9 = false;
+        ret %tmp.9;
+_Users_oskar_BoatNav_source_BoatNavDelegate_mc_17_33_23_4_stop:
+    }
+}
+[ @file = "/Users/oskar/BoatNav/source/BoatNavDelegate.mc"; @line = 1; ]
+<init> {
+}

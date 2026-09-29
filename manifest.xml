@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="1">
+  <iq:application
+      entry="BoatNavApp"
+      id="dce655d8-3d0f-4bbf-b6e2-e30bcd0c7293"
+      launcherIcon="@Drawables.LauncherIcon"
+      minSdkVersion="3.0.0"
+      name="@Strings.AppName"
+      type="watch-app">
+    <iq:products>
+      <iq:product id="vivoactive4"/>
+    </iq:products>
+    <iq:permissions>
+      <iq:uses-permission id="Positioning"/>
+    </iq:permissions>
+    <iq:languages>
+      <iq:language>swe</iq:language>
+      <iq:language>eng</iq:language>
+    </iq:languages>
+  </iq:application>
+</iq:manifest>
